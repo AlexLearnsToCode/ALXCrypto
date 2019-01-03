@@ -6,10 +6,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ALXCryptoDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ALXSymmetricEncryptor;
+@class ALXSymmetricDecryptor;
 @interface ALXSymmetricCryptoUtil : NSObject
+
+- (instancetype)initWithSymmetricEncryptor:(ALXSymmetricEncryptor *)encryptor;
+- (instancetype)initWithSymmetricDecryptor:(ALXSymmetricDecryptor *)decryptor;
 
 @end
 
