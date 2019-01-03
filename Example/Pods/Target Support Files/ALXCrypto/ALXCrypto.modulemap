@@ -1,0 +1,6 @@
+framework module ALXCrypto {
+  umbrella header "ALXCrypto-umbrella.h"
+
+  export *
+  module * { export * }
+}

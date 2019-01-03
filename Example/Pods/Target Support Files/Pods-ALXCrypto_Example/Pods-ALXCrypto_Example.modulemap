@@ -1,0 +1,6 @@
+framework module Pods_ALXCrypto_Example {
+  umbrella header "Pods-ALXCrypto_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

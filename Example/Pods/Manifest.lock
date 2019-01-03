@@ -1,0 +1,16 @@
+PODS:
+  - ALXCrypto (0.1.0)
+
+DEPENDENCIES:
+  - ALXCrypto (from `../`)
+
+EXTERNAL SOURCES:
+  ALXCrypto:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ALXCrypto: fc1ff02d85f652902c0f94b901ffcbe2cfa3447d
+
+PODFILE CHECKSUM: 71d30349b3a1f6ff31a7aea395c80177373217fe
+
+COCOAPODS: 1.5.3
