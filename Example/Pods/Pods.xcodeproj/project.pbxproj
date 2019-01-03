@@ -13,6 +13,7 @@
 		A6745D1346F4EB9B95AEE9BED5F817F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		BF9A9B1479D44E10F4A035B4A49AF4E3 /* Pods-ALXCrypto_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CA36C32656CC5AA9B583B2112A69103 /* Pods-ALXCrypto_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2B7B22776ACCF17632774EB3812FB3F /* Pods-ALXCrypto_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF7DA427483BA37BA83C73219B2586 /* Pods-ALXCrypto_Example-dummy.m */; };
+		C66CC8E721DE358200C04A1C /* ALXCryptoDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C66CC8E621DE358200C04A1C /* ALXCryptoDefines.h */; };
 		C6B4CCE821DE0DF800FFCEFA /* ALXCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4CCE621DE0DF800FFCEFA /* ALXCrypto.h */; };
 		C6B4CCEC21DE0E3100FFCEFA /* ALXEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4CCEA21DE0E3100FFCEFA /* ALXEncryptor.h */; };
 		C6B4CCED21DE0E3100FFCEFA /* ALXEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B4CCEB21DE0E3100FFCEFA /* ALXEncryptor.m */; };
@@ -44,7 +45,6 @@
 		C6B4CD2721DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B4CD2521DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.m */; };
 		C6B4CD2A21DE11CA00FFCEFA /* ALXHMACEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4CD2821DE11CA00FFCEFA /* ALXHMACEncryptor.h */; };
 		C6B4CD2B21DE11CA00FFCEFA /* ALXHMACEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B4CD2921DE11CA00FFCEFA /* ALXHMACEncryptor.m */; };
-		C6B4CD2D21DE221C00FFCEFA /* ALXCryptoDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4CD2C21DE221C00FFCEFA /* ALXCryptoDefines.h */; };
 		CAB00F22CDB59FE08EE546A02302C46D /* ALXCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AE38F8B185AD637F77E471B3334A68 /* ALXCrypto-dummy.m */; };
 		EC0636F01C926F729E0E8E1D6484B736 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		FC86FA9FE0B21B2AE5A98CA5CC2EC2A5 /* Pods-ALXCrypto_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E30DE6385937DA84A96D8AE919CFB /* Pods-ALXCrypto_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,6 +92,7 @@
 		984C981ACDCF5D003822F895A93DADDE /* Pods-ALXCrypto_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ALXCrypto_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A14977538A926EE18A7A12DB98EEC74B /* ALXCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALXCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A5C1C1BB8D1704BC8AB4E755EE8016 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C66CC8E621DE358200C04A1C /* ALXCryptoDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALXCryptoDefines.h; path = ALXCrypto/Classes/ALXCryptoDefines.h; sourceTree = "<group>"; };
 		C6B4CCE621DE0DF800FFCEFA /* ALXCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ALXCrypto.h; path = ALXCrypto/Classes/ALXCrypto.h; sourceTree = "<group>"; };
 		C6B4CCEA21DE0E3100FFCEFA /* ALXEncryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXEncryptor.h; sourceTree = "<group>"; };
 		C6B4CCEB21DE0E3100FFCEFA /* ALXEncryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXEncryptor.m; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		C6B4CD2521DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXRSAAsymmetricDecryptor.m; sourceTree = "<group>"; };
 		C6B4CD2821DE11CA00FFCEFA /* ALXHMACEncryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXHMACEncryptor.h; sourceTree = "<group>"; };
 		C6B4CD2921DE11CA00FFCEFA /* ALXHMACEncryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXHMACEncryptor.m; sourceTree = "<group>"; };
-		C6B4CD2C21DE221C00FFCEFA /* ALXCryptoDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXCryptoDefines.h; sourceTree = "<group>"; };
 		CD0239FE4A907827AD46631A3A52776B /* Pods-ALXCrypto_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXCrypto_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		D419EF7C83FB3F23AEF8F6B75C5E2195 /* ALXCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALXCrypto-umbrella.h"; sourceTree = "<group>"; };
 		D48A48315E6EC7D8C5D4C8415B431527 /* Pods-ALXCrypto_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ALXCrypto_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -422,7 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B4CCE621DE0DF800FFCEFA /* ALXCrypto.h */,
-				C6B4CD2C21DE221C00FFCEFA /* ALXCryptoDefines.h */,
+				C66CC8E621DE358200C04A1C /* ALXCryptoDefines.h */,
 				C6B4CCD921DE0DA400FFCEFA /* Encrypt */,
 				C6B4CCDE21DE0DA400FFCEFA /* Decrypt */,
 				AF68026AA9CA579E4AD55EA01F028903 /* Pod */,
@@ -450,7 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B4CCEC21DE0E3100FFCEFA /* ALXEncryptor.h in Headers */,
-				C6B4CD2D21DE221C00FFCEFA /* ALXCryptoDefines.h in Headers */,
+				C66CC8E721DE358200C04A1C /* ALXCryptoDefines.h in Headers */,
 				C6B4CCF021DE0E4700FFCEFA /* ALXDecryptor.h in Headers */,
 				C6B4CD0821DE0F2600FFCEFA /* ALXAsymmetricDecryptor.h in Headers */,
 				81E9C40B18126A229BF25CD298CE69ED /* ALXCrypto-umbrella.h in Headers */,
