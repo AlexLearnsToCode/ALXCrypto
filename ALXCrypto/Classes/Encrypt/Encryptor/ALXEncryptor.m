@@ -10,8 +10,11 @@
 @implementation ALXEncryptor
 
 - (NSString *)encrypt:(NSString *)plaintext {
-    // TODO:Alexgao---plaintext基本处理
-    return @"";
+    if (!plaintext.length) {
+        NSAssert(plaintext.length > 0, @"invalid argument 'plaintext'.");
+        return @"";
+    }
+    return plaintext;
 }
 
 @end

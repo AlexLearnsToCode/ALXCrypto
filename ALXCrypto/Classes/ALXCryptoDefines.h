@@ -10,7 +10,6 @@
 #pragma mark - Hash
 
 typedef NS_ENUM(NSInteger, ALXHashAlgorithm) {
-    ALXHashAlgorithmNone = -1,
     /** md5_16_lowercase */
     ALXHashAlgorithmmd516 = 1,
     /** md5_32_lowercase */
@@ -29,7 +28,6 @@ typedef NS_ENUM(NSInteger, ALXHashAlgorithm) {
 #pragma mark - Symmetric
 
 typedef NS_ENUM(NSInteger, ALXSymmetricCryptoMode) {
-    ALXSymmetricCryptoModeNone = -1,
     ALXSymmetricCryptoModeCBC = 1,
     ALXSymmetricCryptoModeECB
 };
@@ -44,6 +42,5 @@ typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
 #pragma mark - Asymmetric
 
 typedef NS_ENUM(NSInteger, ALXAsymmetricCryptoAlgorithm) {
-    ALXAsymmetricCryptoAlgorithmNone = -1,
-    ALXAsymmetricCryptoAlgorithmRSA
+    ALXAsymmetricCryptoAlgorithmRSA = 1,
 };

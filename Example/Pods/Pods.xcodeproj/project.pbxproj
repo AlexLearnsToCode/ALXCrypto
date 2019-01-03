@@ -45,6 +45,12 @@
 		C6B4CD2721DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B4CD2521DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.m */; };
 		C6B4CD2A21DE11CA00FFCEFA /* ALXHMACEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4CD2821DE11CA00FFCEFA /* ALXHMACEncryptor.h */; };
 		C6B4CD2B21DE11CA00FFCEFA /* ALXHMACEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B4CD2921DE11CA00FFCEFA /* ALXHMACEncryptor.m */; };
+		C6E5FE0021DE3AED00C1118A /* ALXHashCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E5FDFE21DE3AED00C1118A /* ALXHashCryptoUtil.h */; };
+		C6E5FE0121DE3AED00C1118A /* ALXHashCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5FDFF21DE3AED00C1118A /* ALXHashCryptoUtil.m */; };
+		C6E5FE0421DE3AFF00C1118A /* ALXSymmetricCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E5FE0221DE3AFF00C1118A /* ALXSymmetricCryptoUtil.h */; };
+		C6E5FE0521DE3AFF00C1118A /* ALXSymmetricCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5FE0321DE3AFF00C1118A /* ALXSymmetricCryptoUtil.m */; };
+		C6E5FE0821DE3B1000C1118A /* ALXAsymmetricCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C6E5FE0621DE3B1000C1118A /* ALXAsymmetricCryptoUtil.h */; };
+		C6E5FE0921DE3B1000C1118A /* ALXAsymmetricCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E5FE0721DE3B1000C1118A /* ALXAsymmetricCryptoUtil.m */; };
 		CAB00F22CDB59FE08EE546A02302C46D /* ALXCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AE38F8B185AD637F77E471B3334A68 /* ALXCrypto-dummy.m */; };
 		EC0636F01C926F729E0E8E1D6484B736 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		FC86FA9FE0B21B2AE5A98CA5CC2EC2A5 /* Pods-ALXCrypto_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E30DE6385937DA84A96D8AE919CFB /* Pods-ALXCrypto_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,6 +130,12 @@
 		C6B4CD2521DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXRSAAsymmetricDecryptor.m; sourceTree = "<group>"; };
 		C6B4CD2821DE11CA00FFCEFA /* ALXHMACEncryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXHMACEncryptor.h; sourceTree = "<group>"; };
 		C6B4CD2921DE11CA00FFCEFA /* ALXHMACEncryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXHMACEncryptor.m; sourceTree = "<group>"; };
+		C6E5FDFE21DE3AED00C1118A /* ALXHashCryptoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXHashCryptoUtil.h; sourceTree = "<group>"; };
+		C6E5FDFF21DE3AED00C1118A /* ALXHashCryptoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXHashCryptoUtil.m; sourceTree = "<group>"; };
+		C6E5FE0221DE3AFF00C1118A /* ALXSymmetricCryptoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXSymmetricCryptoUtil.h; sourceTree = "<group>"; };
+		C6E5FE0321DE3AFF00C1118A /* ALXSymmetricCryptoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXSymmetricCryptoUtil.m; sourceTree = "<group>"; };
+		C6E5FE0621DE3B1000C1118A /* ALXAsymmetricCryptoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXAsymmetricCryptoUtil.h; sourceTree = "<group>"; };
+		C6E5FE0721DE3B1000C1118A /* ALXAsymmetricCryptoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXAsymmetricCryptoUtil.m; sourceTree = "<group>"; };
 		CD0239FE4A907827AD46631A3A52776B /* Pods-ALXCrypto_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXCrypto_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		D419EF7C83FB3F23AEF8F6B75C5E2195 /* ALXCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALXCrypto-umbrella.h"; sourceTree = "<group>"; };
 		D48A48315E6EC7D8C5D4C8415B431527 /* Pods-ALXCrypto_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ALXCrypto_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -418,11 +430,50 @@
 			path = RSA;
 			sourceTree = "<group>";
 		};
+		C6E5FDFA21DE3AA800C1118A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C6E5FDFC21DE3AC100C1118A /* Hash */,
+				C6E5FDFD21DE3AC100C1118A /* Symmetric */,
+				C6E5FDFB21DE3AC100C1118A /* Asymmetric */,
+			);
+			name = Util;
+			path = ALXCrypto/Classes/Util;
+			sourceTree = "<group>";
+		};
+		C6E5FDFB21DE3AC100C1118A /* Asymmetric */ = {
+			isa = PBXGroup;
+			children = (
+				C6E5FE0621DE3B1000C1118A /* ALXAsymmetricCryptoUtil.h */,
+				C6E5FE0721DE3B1000C1118A /* ALXAsymmetricCryptoUtil.m */,
+			);
+			path = Asymmetric;
+			sourceTree = "<group>";
+		};
+		C6E5FDFC21DE3AC100C1118A /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				C6E5FDFE21DE3AED00C1118A /* ALXHashCryptoUtil.h */,
+				C6E5FDFF21DE3AED00C1118A /* ALXHashCryptoUtil.m */,
+			);
+			path = Hash;
+			sourceTree = "<group>";
+		};
+		C6E5FDFD21DE3AC100C1118A /* Symmetric */ = {
+			isa = PBXGroup;
+			children = (
+				C6E5FE0221DE3AFF00C1118A /* ALXSymmetricCryptoUtil.h */,
+				C6E5FE0321DE3AFF00C1118A /* ALXSymmetricCryptoUtil.m */,
+			);
+			path = Symmetric;
+			sourceTree = "<group>";
+		};
 		F2258A1740757F6A2C05FB0C2136FCB1 /* ALXCrypto */ = {
 			isa = PBXGroup;
 			children = (
 				C6B4CCE621DE0DF800FFCEFA /* ALXCrypto.h */,
 				C66CC8E621DE358200C04A1C /* ALXCryptoDefines.h */,
+				C6E5FDFA21DE3AA800C1118A /* Util */,
 				C6B4CCD921DE0DA400FFCEFA /* Encrypt */,
 				C6B4CCDE21DE0DA400FFCEFA /* Decrypt */,
 				AF68026AA9CA579E4AD55EA01F028903 /* Pod */,
@@ -454,10 +505,12 @@
 				C6B4CCF021DE0E4700FFCEFA /* ALXDecryptor.h in Headers */,
 				C6B4CD0821DE0F2600FFCEFA /* ALXAsymmetricDecryptor.h in Headers */,
 				81E9C40B18126A229BF25CD298CE69ED /* ALXCrypto-umbrella.h in Headers */,
+				C6E5FE0821DE3B1000C1118A /* ALXAsymmetricCryptoUtil.h in Headers */,
 				C6B4CD1A21DE100C00FFCEFA /* ALXRSAAsymmetricEncryptor.h in Headers */,
 				C6B4CCE821DE0DF800FFCEFA /* ALXCrypto.h in Headers */,
 				C6B4CCF821DE0ECC00FFCEFA /* ALXHashEncryptor.h in Headers */,
 				C6B4CD1E21DE104900FFCEFA /* ALXCBCSymmetricDecryptor.h in Headers */,
+				C6E5FE0421DE3AFF00C1118A /* ALXSymmetricCryptoUtil.h in Headers */,
 				C6B4CD2A21DE11CA00FFCEFA /* ALXHMACEncryptor.h in Headers */,
 				C6B4CD2221DE105C00FFCEFA /* ALXECBSymmetricDecryptor.h in Headers */,
 				C6B4CCFC21DE0EE400FFCEFA /* ALXSymmetricEncryptor.h in Headers */,
@@ -466,6 +519,7 @@
 				C6B4CCF521DE0E8900FFCEFA /* ALXDecrypt.h in Headers */,
 				C6B4CCF321DE0E7700FFCEFA /* ALXEncrypt.h in Headers */,
 				C6B4CD0421DE0F0D00FFCEFA /* ALXSymmetricDecryptor.h in Headers */,
+				C6E5FE0021DE3AED00C1118A /* ALXHashCryptoUtil.h in Headers */,
 				C6B4CD2621DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.h in Headers */,
 				C6B4CD1621DE0FD600FFCEFA /* ALXECBSymmetricEncryptor.h in Headers */,
 			);
@@ -592,12 +646,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E5FE0921DE3B1000C1118A /* ALXAsymmetricCryptoUtil.m in Sources */,
 				C6B4CD2321DE105C00FFCEFA /* ALXECBSymmetricDecryptor.m in Sources */,
 				C6B4CD1321DE0FC200FFCEFA /* ALXCBCSymmetricEncryptor.m in Sources */,
 				C6B4CCF921DE0ECC00FFCEFA /* ALXHashEncryptor.m in Sources */,
 				C6B4CCF121DE0E4700FFCEFA /* ALXDecryptor.m in Sources */,
 				C6B4CD1721DE0FD600FFCEFA /* ALXECBSymmetricEncryptor.m in Sources */,
 				C6B4CD2721DE107100FFCEFA /* ALXRSAAsymmetricDecryptor.m in Sources */,
+				C6E5FE0121DE3AED00C1118A /* ALXHashCryptoUtil.m in Sources */,
 				C6B4CD0921DE0F2600FFCEFA /* ALXAsymmetricDecryptor.m in Sources */,
 				C6B4CCED21DE0E3100FFCEFA /* ALXEncryptor.m in Sources */,
 				C6B4CCFD21DE0EE400FFCEFA /* ALXSymmetricEncryptor.m in Sources */,
@@ -605,6 +661,7 @@
 				C6B4CD0121DE0EF900FFCEFA /* ALXAsymmetricEncryptor.m in Sources */,
 				C6B4CD0521DE0F0D00FFCEFA /* ALXSymmetricDecryptor.m in Sources */,
 				C6B4CD2B21DE11CA00FFCEFA /* ALXHMACEncryptor.m in Sources */,
+				C6E5FE0521DE3AFF00C1118A /* ALXSymmetricCryptoUtil.m in Sources */,
 				CAB00F22CDB59FE08EE546A02302C46D /* ALXCrypto-dummy.m in Sources */,
 				C6B4CD1F21DE104900FFCEFA /* ALXCBCSymmetricDecryptor.m in Sources */,
 			);
