@@ -7,12 +7,17 @@
 
 #import <Foundation/Foundation.h>
 #import "ALXCryptoDefines.h"
+#import <Security/Security.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class ALXAsymmetricEncryptor;
 @class ALXAsymmetricDecryptor;
 @interface ALXAsymmetricCryptoUtil : NSObject
+
+@property (nonatomic) SecKeyRef seckey;
+
+- (SecKeyRef)seckey;
 
 - (instancetype)initWithAsymmetricEncryptor:(ALXAsymmetricEncryptor *)encryptor;
 - (instancetype)initWithAsymmetricDecryptor:(ALXAsymmetricDecryptor *)decryptor;

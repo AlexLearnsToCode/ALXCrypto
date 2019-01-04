@@ -14,9 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) ALXAsymmetricCryptoAlgorithm algorithm;
 
+// !!!:Alexgao---iOS 暂不支持私钥加密,公钥解密
 #pragma mark - Private Key
 @property (nonatomic, copy) NSString *privateKey;
 @property (nonatomic, copy) NSString *privateKeyFilePath;
+@property (nonatomic, copy) NSString *password;
 
 @end
 

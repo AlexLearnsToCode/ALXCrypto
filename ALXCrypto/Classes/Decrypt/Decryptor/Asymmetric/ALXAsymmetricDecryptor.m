@@ -10,11 +10,11 @@
 @implementation ALXAsymmetricDecryptor
 
 - (NSString *)decrypt:(NSString *)ciphertext{
-    [super decrypt:ciphertext];
+    if (![super decrypt:ciphertext].length) {
+        return @"";
+    }
     
-    // TODO:Alexgao---处理private key, algorithm等
-    
-    return @"";
+    return ciphertext;
 }
 
 @end

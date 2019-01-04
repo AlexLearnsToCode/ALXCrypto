@@ -27,11 +27,6 @@ typedef NS_ENUM(NSInteger, ALXHashAlgorithm) {
 
 #pragma mark - Symmetric
 
-typedef NS_ENUM(NSInteger, ALXSymmetricCryptoMode) {
-    ALXSymmetricCryptoModeCBC = 1,
-    ALXSymmetricCryptoModeECB
-};
-
 typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
     ALXPKCSNoPadding = 0,
     ALXPKCS5Padding,

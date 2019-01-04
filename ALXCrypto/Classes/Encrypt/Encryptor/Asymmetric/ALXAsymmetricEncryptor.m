@@ -10,10 +10,11 @@
 @implementation ALXAsymmetricEncryptor
 
 - (NSString *)encrypt:(NSString *)plaintext{
-    [super encrypt:plaintext];
+    if (![super encrypt:plaintext].length) {
+        return @"";
+    }
     
-    // TODO:Alexgao---处理public key
-    return @"";
+    return plaintext;
 }
 
 @end

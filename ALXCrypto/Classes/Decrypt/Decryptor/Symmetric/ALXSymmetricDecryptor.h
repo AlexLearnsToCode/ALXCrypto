@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ALXSymmetricDecryptor : ALXDecryptor
 
-@property (nonatomic, readonly) ALXSymmetricCryptoMode mode;
+@property (nonatomic, readonly) CCMode mode;
 
 @property (nonatomic) CCAlgorithm algorithm;
 @property (nonatomic, copy) NSString *key;

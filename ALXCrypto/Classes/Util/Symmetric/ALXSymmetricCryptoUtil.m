@@ -38,10 +38,29 @@ static CCOptions ALXOptionsFromModeAndPadding(CCMode mode, ALXPKCSPadding paddin
 
 @implementation ALXSymmetricCryptoUtil
 
+- (NSString *)resultStringWithBytes:(void *)result length:(size_t)length{
+    // Alexgao---resultData会自动释放buffer
+    NSData *resultData = [NSData dataWithBytesNoCopy:result length:length];
+    if (self.operation == kCCEncrypt) {
+        return [[NSString alloc] initWithData:[resultData base64EncodedDataWithOptions:NSDataBase64Encoding64CharacterLineLength] encoding:NSUTF8StringEncoding];
+    }else if (self.operation == kCCDecrypt) {
+        return [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
+    }
+    return @"";
+}
+
 - (instancetype)initWithSymmetricEncryptor:(ALXSymmetricEncryptor *)encryptor{
     self = [super init];
     if (self) {
-        <#custom#>
+        self.operation = kCCEncrypt;
+        self.options = ALXOptionsFromModeAndPadding(encryptor.mode, encryptor.padding);
+        
+        if (!encryptor.key.length) {
+            NSAssert(encryptor.key.length > 0, @"invalid argument 'key'");
+            return nil;
+        }
+        
+        // TODO:Alexgao---处理key的size
     }
     return self;
 }
@@ -49,7 +68,16 @@ static CCOptions ALXOptionsFromModeAndPadding(CCMode mode, ALXPKCSPadding paddin
 - (instancetype)initWithSymmetricDecryptor:(ALXSymmetricDecryptor *)decryptor{
     self = [super init];
     if (self) {
-        <#custom#>
+        self.operation = kCCDecrypt;
+        self.options = ALXOptionsFromModeAndPadding(decryptor.mode, decryptor.padding);
+        
+        if (!decryptor.key.length) {
+            NSAssert(decryptor.key.length > 0, @"invalid argument 'key'");
+            return nil;
+        }
+        
+        // TODO:Alexgao---处理key的size
+        
     }
     return self;
 }
