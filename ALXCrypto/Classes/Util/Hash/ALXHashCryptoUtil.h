@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALXCryptoDefines.h"
+#import <CommonCrypto/CommonCrypto.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class ALXHashEncryptor;
+@class ALXHashCryptor;
 @class ALXHMACEncryptor;
 @interface ALXHashCryptoUtil : NSObject
 
@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) CCHmacAlgorithm hmacAlgorithm;
 
-- (instancetype)initWithHashEncryptor:(ALXHashEncryptor *)hashEncryptor;
-- (instancetype)initWithHmacEncryptor:(ALXHMACEncryptor *)hmacEncryptor;
+- (instancetype)initWithHashCryptor:(ALXHashCryptor *)hashCryptor;
+//- (instancetype)initWithHmacCryptor:(ALXHMACEncryptor *)hmacCryptor;
 
 - (NSString *)hashStringWithBytes:(uint8_t *)result;
 

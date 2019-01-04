@@ -6,8 +6,7 @@
 //
 
 #import "ALXSymmetricCryptoUtil.h"
-#import "ALXSymmetricEncryptor.h"
-#import "ALXSymmetricDecryptor.h"
+#import "ALXSymmetricCryptor.h"
 
 static CCOptions ALXOptionsFromModeAndPadding(CCMode mode, ALXPKCSPadding padding) {
     if (mode == kCCModeECB) {
@@ -49,35 +48,18 @@ static CCOptions ALXOptionsFromModeAndPadding(CCMode mode, ALXPKCSPadding paddin
     return @"";
 }
 
-- (instancetype)initWithSymmetricEncryptor:(ALXSymmetricEncryptor *)encryptor{
+- (instancetype)initWithSymmetricCryptor:(ALXSymmetricCryptor *)symmetricCryptor {
     self = [super init];
     if (self) {
-        self.operation = kCCEncrypt;
-        self.options = ALXOptionsFromModeAndPadding(encryptor.mode, encryptor.padding);
         
-        if (!encryptor.key.length) {
-            NSAssert(encryptor.key.length > 0, @"invalid argument 'key'");
+        self.options = ALXOptionsFromModeAndPadding(symmetricCryptor.mode, symmetricCryptor.padding);
+        
+        if (!symmetricCryptor.key.length) {
+            NSAssert(symmetricCryptor.key.length > 0, @"invalid argument 'key'");
             return nil;
         }
         
         // TODO:Alexgao---处理key的size
-    }
-    return self;
-}
-
-- (instancetype)initWithSymmetricDecryptor:(ALXSymmetricDecryptor *)decryptor{
-    self = [super init];
-    if (self) {
-        self.operation = kCCDecrypt;
-        self.options = ALXOptionsFromModeAndPadding(decryptor.mode, decryptor.padding);
-        
-        if (!decryptor.key.length) {
-            NSAssert(decryptor.key.length > 0, @"invalid argument 'key'");
-            return nil;
-        }
-        
-        // TODO:Alexgao---处理key的size
-        
     }
     return self;
 }

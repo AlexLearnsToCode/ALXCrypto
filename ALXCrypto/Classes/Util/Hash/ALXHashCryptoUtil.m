@@ -6,8 +6,8 @@
 //
 
 #import "ALXHashCryptoUtil.h"
-#import "ALXHashEncryptor.h"
-#import "ALXHMACEncryptor.h"
+#import "ALXHashCryptor.h"
+#import "ALXHMACCryptor.h"
 
 static int ALXLengthFromHashAlgorithm(ALXHashAlgorithm algorithm) {
     switch (algorithm) {
@@ -90,38 +90,27 @@ static CCHmacAlgorithm ALXHmacAlgorithmFromHashAlgorithm(ALXHashAlgorithm algori
     return [digest copy];
 }
 
-- (instancetype)initWithHashEncryptor:(ALXHashEncryptor *)hashEncryptor {
+- (instancetype)initWithHashCryptor:(ALXHashCryptor *)hashCryptor {
     self = [super init];
     if (self) {
         
-        self.resultLength = ALXLengthFromHashAlgorithm(hashEncryptor.algorithm);
+        self.resultLength = ALXLengthFromHashAlgorithm(hashCryptor.algorithm);
         if (self.resultLength <= 0) {
             NSAssert(self.resultLength > 0, @"invalid argument 'algorithm'.");
             return nil;
         }
         
-        self.uppercase = ALXUppercaseFromHashAlgorithm(hashEncryptor.algorithm);
-    }
-    return self;
-}
-
-- (instancetype)initWithHmacEncryptor:(ALXHMACEncryptor *)hmacEncryptor {
-    self = [super init];
-    if (self) {
+        self.uppercase = ALXUppercaseFromHashAlgorithm(hashCryptor.algorithm);
         
-        self.resultLength = ALXLengthFromHashAlgorithm(hmacEncryptor.algorithm);
-        if (self.resultLength <= 0) {
-            NSAssert(self.resultLength > 0, @"invalid argument 'algorithm'.");
-            return nil;
-        }
-        
-        self.uppercase = ALXUppercaseFromHashAlgorithm(hmacEncryptor.algorithm);
-        
-        self.hmacAlgorithm = ALXHmacAlgorithmFromHashAlgorithm(hmacEncryptor.algorithm);
-        
-        if (!hmacEncryptor.key.length) {
-            NSAssert(hmacEncryptor.key.length > 0, @"invalid argument 'key'.");
-            return nil;
+        if ([hashCryptor isKindOfClass:[ALXHMACCryptor class]]) {
+            ALXHMACCryptor *hmacCryptor = (ALXHMACCryptor *)hashCryptor;
+            
+            self.hmacAlgorithm = ALXHmacAlgorithmFromHashAlgorithm(hmacCryptor.algorithm);
+            
+            if (!hmacCryptor.key.length) {
+                NSAssert(hmacCryptor.key.length > 0, @"invalid argument 'key'.");
+                return nil;
+            }
         }
     }
     return self;

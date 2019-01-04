@@ -6,19 +6,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALXCryptoDefines.h"
+#import <CommonCrypto/CommonCrypto.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class ALXSymmetricEncryptor;
-@class ALXSymmetricDecryptor;
+@class ALXSymmetricCryptor;
 @interface ALXSymmetricCryptoUtil : NSObject
 
 @property (nonatomic) CCOperation operation;
 @property (nonatomic) CCOptions options;
 
-- (instancetype)initWithSymmetricEncryptor:(ALXSymmetricEncryptor *)encryptor;
-- (instancetype)initWithSymmetricDecryptor:(ALXSymmetricDecryptor *)decryptor;
+- (instancetype)initWithSymmetricCryptor:(ALXSymmetricCryptor *)symmetricCryptor;
 
 - (NSString *)resultStringWithBytes:(void *)result length:(size_t)length;
 
