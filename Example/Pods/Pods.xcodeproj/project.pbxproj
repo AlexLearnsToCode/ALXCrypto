@@ -299,8 +299,8 @@
 		C69C910121DF780D00468925 /* ECB */ = {
 			isa = PBXGroup;
 			children = (
-				C69C910221DF780D00468925 /* ALXECBSymmetricCryptor.m */,
 				C69C910321DF780D00468925 /* ALXECBSymmetricCryptor.h */,
+				C69C910221DF780D00468925 /* ALXECBSymmetricCryptor.m */,
 			);
 			path = ECB;
 			sourceTree = "<group>";
@@ -308,8 +308,8 @@
 		C69C910421DF780D00468925 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				C69C910521DF780D00468925 /* ALXSymmetricCryptoUtil.m */,
 				C69C910621DF780D00468925 /* ALXSymmetricCryptoUtil.h */,
+				C69C910521DF780D00468925 /* ALXSymmetricCryptoUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -318,9 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				C69C910A21DF780D00468925 /* ALXHashCryptor.h */,
-				C69C910E21DF780D00468925 /* ALXHMACCryptor.m */,
 				C69C910F21DF780D00468925 /* ALXHashCryptor.m */,
 				C69C911021DF780D00468925 /* ALXHMACCryptor.h */,
+				C69C910E21DF780D00468925 /* ALXHMACCryptor.m */,
 				C69C910B21DF780D00468925 /* Util */,
 			);
 			path = Hash;
@@ -350,9 +350,9 @@
 			isa = PBXGroup;
 			children = (
 				C69C911421DF780D00468925 /* ALXAsymmetricEncryptorUtil.h */,
-				C69C911521DF780D00468925 /* ALXAsymmetricDecryptorUtil.m */,
 				C69C911621DF780D00468925 /* ALXAsymmetricEncryptorUtil.m */,
 				C69C911721DF780D00468925 /* ALXAsymmetricDecryptorUtil.h */,
+				C69C911521DF780D00468925 /* ALXAsymmetricDecryptorUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -368,8 +368,8 @@
 		C69C911A21DF780D00468925 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
-				C69C911B21DF780D00468925 /* ALXRSAAsymmetricCryptor.m */,
 				C69C911C21DF780D00468925 /* ALXRSAAsymmetricCryptor.h */,
+				C69C911B21DF780D00468925 /* ALXRSAAsymmetricCryptor.m */,
 			);
 			path = RSA;
 			sourceTree = "<group>";
