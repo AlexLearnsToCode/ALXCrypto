@@ -14,9 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ALXSymmetricCryptoUtil : NSObject
 
 @property (nonatomic) CCOperation operation;
+@property (nonatomic) CCAlgorithm algorithm;
 @property (nonatomic) CCOptions options;
+@property (nonatomic) int blockSize;
+@property (nonatomic) int keySize;
 
 - (instancetype)initWithSymmetricCryptor:(ALXSymmetricCryptor *)symmetricCryptor;
+
+- (NSString *)addPaddingToString:(NSString *)plaintext;
+- (NSString *)removePaddingFromString:(NSString *)ciphertext;
 
 - (NSString *)resultStringWithBytes:(void *)result length:(size_t)length;
 

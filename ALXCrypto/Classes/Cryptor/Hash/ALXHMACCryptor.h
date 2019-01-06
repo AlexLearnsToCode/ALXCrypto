@@ -5,12 +5,20 @@
 //  Created by Alexgao on 2019/1/4.
 //
 
-#import "ALXHashCryptor.h"
+#import "ALXCryptor.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ALXHMACCryptor : ALXHashCryptor
+typedef NS_ENUM(NSInteger, ALXHMACAlgorithm) {
+    ALXHMACAlgorithmmd5,
+    ALXHMACAlgorithmSHA1,
+    ALXHMACAlgorithmSHA256,
+    ALXHMACAlgorithmSHA512,
+};
 
+@interface ALXHMACCryptor : ALXCryptor
+
+@property (nonatomic) ALXHMACAlgorithm algorithm;
 @property (nonatomic, copy) NSString *key;
 
 @end

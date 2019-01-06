@@ -7,127 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42166D84EE0A4302E8662D98DB16BC43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		81E9C40B18126A229BF25CD298CE69ED /* ALXCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D419EF7C83FB3F23AEF8F6B75C5E2195 /* ALXCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A539197F1612A9881DBE93BC55AE9CA /* CocoaSecurity-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A08FD08C93D3DC9D20236540179CE9AB /* CocoaSecurity-dummy.m */; };
+		0CABC146B7AE68D57FFCADE2BE7043A5 /* CocoaSecurity-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A6C900FF7FD13AB46D1021AA73D5E4 /* CocoaSecurity-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1911C15821E1FBE700DA58FE /* ALXHMACCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1911C15621E1FBE700DA58FE /* ALXHMACCryptoUtil.h */; };
+		1911C15921E1FBE700DA58FE /* ALXHMACCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1911C15721E1FBE700DA58FE /* ALXHMACCryptoUtil.m */; };
+		19CFFD0C2DD9583F3A8997B3109D1801 /* ALXHashCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7F2CA15CF1F4FE623CAB0972945F01 /* ALXHashCryptoUtil.m */; };
+		1F91B41296FD512CA807CD5B3B279F97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
+		25A4F87E4913FE9FE80C13DA49AE561A /* ALXAsymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B9D2FB3872953198DA9C495B7B1442 /* ALXAsymmetricCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28A273BECF816DF6E570C023E67513BE /* ALXHMACCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 86545D3F03CD838A1DE13EAD989B152A /* ALXHMACCryptor.m */; };
+		3011EFEBEA79719376FD7DB08EF60006 /* ALXAsymmetricDecryptorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A4D03900FCA5FE27311D7196FAE05E /* ALXAsymmetricDecryptorUtil.m */; };
+		3477A27FAAD4002DD5679BBBC2890C59 /* ALXCBCSymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 44071D88C8D184D26D3B523955C73DEF /* ALXCBCSymmetricCryptor.m */; };
+		3FE0B8F4B2596D8EEE3DEB5355C69432 /* ALXCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 997651E82A03BF42885DB906CE992D08 /* ALXCrypto-dummy.m */; };
+		4A353B5C67649A33DB6A0347FC70F772 /* ALXHashCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 4504680413A6A4D19098C5F769A4044E /* ALXHashCryptoUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D473486156ED9883060AE338E919439 /* ALXSymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 799DB0C7099EEA111EA92A95EDEA3F47 /* ALXSymmetricCryptor.m */; };
+		6EC4ABD955A7A208A410E0077A695709 /* ALXECBSymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = A743E23E757D22B9D3FAAF9DBD8FE814 /* ALXECBSymmetricCryptor.m */; };
+		724F45D75B7A3717E5451E4255096C8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
+		774440324F214F2CC6C2AC247CFA27B2 /* ALXCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F376A4EA9664EDD2D5898FA1FA309D /* ALXCryptor.m */; };
+		77A8C5558EF5FA648C37BBB7DA11DA57 /* ALXHMACCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E3A02F3E75FECC86CD07DF51B88A49 /* ALXHMACCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B6D9DA2D6ED58C8359D8C5EA67CD4C5 /* ALXAsymmetricEncryptorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1387012CDCF9FCAB87753529255E34B3 /* ALXAsymmetricEncryptorUtil.m */; };
+		7D04613D0B1302DB1FACC477FD6D3FDC /* ALXSymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 169E710D096D74DCF464422BEF934E23 /* ALXSymmetricCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		803DAA356A98141222FD171291D188D4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7570261E6ACC7105B21202B26AE43D97 /* Security.framework */; };
+		8436B88A9D95EB840C84022CD613EFB0 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBD1F22B9F8E15FC2D36CE19A880684 /* Base64.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		87E0DB7B9CDA62448F1480BC2BEC82F8 /* ALXCBCSymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B51734152094A0AB679D4C6E78B0094 /* ALXCBCSymmetricCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A2A927F6781E87CBAADE71615414A75 /* ALXCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = EE725168850C66508EF113B209B8040C /* ALXCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BBCCACB3D609A72681A0D9761B64D20 /* Pods-ALXCrypto_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B54E3FF63A5F10E820CBAB5D276464 /* Pods-ALXCrypto_Tests-dummy.m */; };
-		A6745D1346F4EB9B95AEE9BED5F817F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		9027CA7DD72137607B6D6ACA158EA846 /* ALXRSAAsymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE60961877B3D6C52AD242923A506CD /* ALXRSAAsymmetricCryptor.m */; };
+		9C9469714658BACCFB803ED6673AE529 /* Pods-ALXCrypto_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF7DA427483BA37BA83C73219B2586 /* Pods-ALXCrypto_Example-dummy.m */; };
+		A5BC08E8A9629CE48ACA2C7C9050CA1D /* CocoaSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = D59E01DF4B11653789C10F84FC628CE1 /* CocoaSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6745D1346F4EB9B95AEE9BED5F817F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
+		A8120F1B331C2E2C6F902F01164B8163 /* ALXCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC52A6AC21D37A01B3AD444484C099A0 /* ALXCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE514E222602010224F4229FD0D7B357 /* ALXSymmetricCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 134AD15D0FE4A4C4F451B8A6B3CBFEFC /* ALXSymmetricCryptoUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE6EE28BB6E54D13907E674AC7DF6B2E /* ALXAsymmetricDecryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 763FFE07E86F42E005280A655D46D309 /* ALXAsymmetricDecryptorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF9A9B1479D44E10F4A035B4A49AF4E3 /* Pods-ALXCrypto_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CA36C32656CC5AA9B583B2112A69103 /* Pods-ALXCrypto_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2B7B22776ACCF17632774EB3812FB3F /* Pods-ALXCrypto_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF7DA427483BA37BA83C73219B2586 /* Pods-ALXCrypto_Example-dummy.m */; };
-		C69C911F21DF780D00468925 /* ALXCBCSymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C90FF21DF780D00468925 /* ALXCBCSymmetricCryptor.h */; };
-		C69C912021DF780D00468925 /* ALXCBCSymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C910021DF780D00468925 /* ALXCBCSymmetricCryptor.m */; };
-		C69C912121DF780D00468925 /* ALXECBSymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C910221DF780D00468925 /* ALXECBSymmetricCryptor.m */; };
-		C69C912221DF780D00468925 /* ALXECBSymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C910321DF780D00468925 /* ALXECBSymmetricCryptor.h */; };
-		C69C912321DF780D00468925 /* ALXSymmetricCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C910521DF780D00468925 /* ALXSymmetricCryptoUtil.m */; };
-		C69C912421DF780D00468925 /* ALXSymmetricCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C910621DF780D00468925 /* ALXSymmetricCryptoUtil.h */; };
-		C69C912521DF780D00468925 /* ALXSymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C910721DF780D00468925 /* ALXSymmetricCryptor.h */; };
-		C69C912621DF780D00468925 /* ALXSymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C910821DF780D00468925 /* ALXSymmetricCryptor.m */; };
-		C69C912721DF780D00468925 /* ALXHashCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C910A21DF780D00468925 /* ALXHashCryptor.h */; };
-		C69C912821DF780D00468925 /* ALXHashCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C910C21DF780D00468925 /* ALXHashCryptoUtil.h */; };
-		C69C912921DF780D00468925 /* ALXHashCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C910D21DF780D00468925 /* ALXHashCryptoUtil.m */; };
-		C69C912A21DF780D00468925 /* ALXHMACCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C910E21DF780D00468925 /* ALXHMACCryptor.m */; };
-		C69C912B21DF780D00468925 /* ALXHashCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C910F21DF780D00468925 /* ALXHashCryptor.m */; };
-		C69C912C21DF780D00468925 /* ALXHMACCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C911021DF780D00468925 /* ALXHMACCryptor.h */; };
-		C69C912D21DF780D00468925 /* ALXCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C911121DF780D00468925 /* ALXCryptor.h */; };
-		C69C912E21DF780D00468925 /* ALXAsymmetricEncryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C911421DF780D00468925 /* ALXAsymmetricEncryptorUtil.h */; };
-		C69C912F21DF780D00468925 /* ALXAsymmetricDecryptorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C911521DF780D00468925 /* ALXAsymmetricDecryptorUtil.m */; };
-		C69C913021DF780D00468925 /* ALXAsymmetricEncryptorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C911621DF780D00468925 /* ALXAsymmetricEncryptorUtil.m */; };
-		C69C913121DF780D00468925 /* ALXAsymmetricDecryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C911721DF780D00468925 /* ALXAsymmetricDecryptorUtil.h */; };
-		C69C913221DF780D00468925 /* ALXAsymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C911821DF780D00468925 /* ALXAsymmetricCryptor.h */; };
-		C69C913321DF780D00468925 /* ALXRSAAsymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C911B21DF780D00468925 /* ALXRSAAsymmetricCryptor.m */; };
-		C69C913421DF780D00468925 /* ALXRSAAsymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = C69C911C21DF780D00468925 /* ALXRSAAsymmetricCryptor.h */; };
-		C69C913521DF780D00468925 /* ALXAsymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C911D21DF780D00468925 /* ALXAsymmetricCryptor.m */; };
-		C69C913621DF780D00468925 /* ALXCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C69C911E21DF780D00468925 /* ALXCryptor.m */; };
-		C6B4CCE821DE0DF800FFCEFA /* ALXCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4CCE621DE0DF800FFCEFA /* ALXCrypto.h */; };
-		CAB00F22CDB59FE08EE546A02302C46D /* ALXCrypto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AE38F8B185AD637F77E471B3334A68 /* ALXCrypto-dummy.m */; };
-		EC0636F01C926F729E0E8E1D6484B736 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		FC86FA9FE0B21B2AE5A98CA5CC2EC2A5 /* Pods-ALXCrypto_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E30DE6385937DA84A96D8AE919CFB /* Pods-ALXCrypto_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C308C48E9C57707306F8580AE37248B2 /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A0154162D553AC2BBC88FE4B250900 /* CocoaSecurity.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CD839EAC20ED0E509AA03BE6FEBCCF96 /* ALXAsymmetricEncryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FD178B622E4C5D60D372AE2B381316 /* ALXAsymmetricEncryptorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDBFA4D15FABA873435F660C4FF7A8F1 /* ALXRSAAsymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = FB5DE4E691DB103CD36249F8EF99F600 /* ALXRSAAsymmetricCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D14CC9B41B90622558F3B5B41CCBE893 /* ALXHashCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 39DC68706A0DE36869A262809E820854 /* ALXHashCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49750CD4E95517E94BB48EFDD4C0D84 /* ALXECBSymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F532BDF9F3D381724555589BE90C9CA /* ALXECBSymmetricCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2E92353562C38E50427D5490BC272D7 /* ALXHashCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 028FCB0212AA735718A6487833C0FB8A /* ALXHashCryptor.m */; };
+		EA9A7AF5B67C339BFC53799BFA4286F5 /* Pods-ALXCrypto_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E30DE6385937DA84A96D8AE919CFB /* Pods-ALXCrypto_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0146AC61B6A25E031D169C20A1DF401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
+		F0EE4063977CD84EF25CFE0E644A41B7 /* ALXSymmetricCryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E0A2BD59ADF2A70795731F7CEF794E /* ALXSymmetricCryptoUtil.m */; };
+		F627D1A41ECA84BBCC3AE6CFDA157C65 /* ALXCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE66DCDD1FE7269940C62C7DDE69E30 /* ALXCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F98F9A32C528DF55CE3902FC2295694C /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 073B4627A231E0B7C74E8D6B730F6EF9 /* Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB0281FE85EA475A5805DD8AAB718CC3 /* ALXAsymmetricCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4A936253472F33F20E0A7027BA302 /* ALXAsymmetricCryptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0BA8EADD2490C1BE5120320FBDACA9BE /* PBXContainerItemProxy */ = {
+		018140A0A3604531CF0AC2C253F5FB52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6CADAB2A05CD453DBD510BDB994378B3;
+			remoteGlobalIDString = 2EC916865DCE762334023786F33E4989;
 			remoteInfo = ALXCrypto;
 		};
 		1A74D9785BF4C52C11C597C1239DE485 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F0C4B159DC49758D4887D7192D9203AA;
+			remoteGlobalIDString = D62F9852D7915BBE88D113E1D35E9AB7;
 			remoteInfo = "Pods-ALXCrypto_Example";
+		};
+		4D5DDFCAC8CEC1F6E34F1AAB4294C8E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CE15060B0E33F7AE0A78865CFACF946;
+			remoteInfo = CocoaSecurity;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0149EC2DDF466E759438FED587EC2C41 /* Pods-ALXCrypto_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ALXCrypto_Example.modulemap"; sourceTree = "<group>"; };
-		01F408F1F2ACDCBB5CCC482AACF2854F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		057D63B1AC1D79EA349864475AFC1043 /* ALXCrypto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALXCrypto.xcconfig; sourceTree = "<group>"; };
+		028FCB0212AA735718A6487833C0FB8A /* ALXHashCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXHashCryptor.m; sourceTree = "<group>"; };
+		031284B6F43AE310E6C7AD2723BE1F68 /* ALXCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALXCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		073B4627A231E0B7C74E8D6B730F6EF9 /* Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = submodules/Base64/Base64/Base64.h; sourceTree = "<group>"; };
 		0AF8F6F9D5026D7A7F57F87BABB76007 /* Pods-ALXCrypto_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ALXCrypto_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0E45F04D7685034C71B64A65F6ABC554 /* Pods-ALXCrypto_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ALXCrypto_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		134AD15D0FE4A4C4F451B8A6B3CBFEFC /* ALXSymmetricCryptoUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXSymmetricCryptoUtil.h; sourceTree = "<group>"; };
+		1387012CDCF9FCAB87753529255E34B3 /* ALXAsymmetricEncryptorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXAsymmetricEncryptorUtil.m; sourceTree = "<group>"; };
+		169E710D096D74DCF464422BEF934E23 /* ALXSymmetricCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXSymmetricCryptor.h; sourceTree = "<group>"; };
+		17FD178B622E4C5D60D372AE2B381316 /* ALXAsymmetricEncryptorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXAsymmetricEncryptorUtil.h; sourceTree = "<group>"; };
+		1911C15621E1FBE700DA58FE /* ALXHMACCryptoUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALXHMACCryptoUtil.h; sourceTree = "<group>"; };
+		1911C15721E1FBE700DA58FE /* ALXHMACCryptoUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALXHMACCryptoUtil.m; sourceTree = "<group>"; };
 		29E086862E588CA734E4F466FB00953C /* Pods-ALXCrypto_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXCrypto_Tests-resources.sh"; sourceTree = "<group>"; };
-		37EC2CFAE62E323FEA829471FAE25A3F /* Pods_ALXCrypto_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALXCrypto_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4A936253472F33F20E0A7027BA302 /* ALXAsymmetricCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXAsymmetricCryptor.m; sourceTree = "<group>"; };
+		2DE66DCDD1FE7269940C62C7DDE69E30 /* ALXCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXCryptor.h; sourceTree = "<group>"; };
 		394931B295B9CA0968574B51694A7BFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39DC68706A0DE36869A262809E820854 /* ALXHashCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXHashCryptor.h; sourceTree = "<group>"; };
+		3E7D4BFE1FF383EE2C2AE02C7C17CBC6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		41A6C900FF7FD13AB46D1021AA73D5E4 /* CocoaSecurity-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaSecurity-umbrella.h"; sourceTree = "<group>"; };
+		44071D88C8D184D26D3B523955C73DEF /* ALXCBCSymmetricCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXCBCSymmetricCryptor.m; sourceTree = "<group>"; };
+		4504680413A6A4D19098C5F769A4044E /* ALXHashCryptoUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXHashCryptoUtil.h; sourceTree = "<group>"; };
 		4A544B9F3B5B9B74A23402B1893D2631 /* Pods-ALXCrypto_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ALXCrypto_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5846C010867D2196D6BAD400849B103C /* ALXCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALXCrypto-prefix.pch"; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4B51734152094A0AB679D4C6E78B0094 /* ALXCBCSymmetricCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXCBCSymmetricCryptor.h; sourceTree = "<group>"; };
+		4F5C5B0875A12BB94E4F4A7FA867EAD3 /* Pods_ALXCrypto_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALXCrypto_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		674B684E409DEA2F314DDD4BCE03AD84 /* Pods-ALXCrypto_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXCrypto_Example-resources.sh"; sourceTree = "<group>"; };
-		6845A9BA98D50112D23A25BB2F740316 /* Pods_ALXCrypto_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALXCrypto_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E3A02F3E75FECC86CD07DF51B88A49 /* ALXHMACCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXHMACCryptor.h; sourceTree = "<group>"; };
 		69B54E3FF63A5F10E820CBAB5D276464 /* Pods-ALXCrypto_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ALXCrypto_Tests-dummy.m"; sourceTree = "<group>"; };
+		6AE60961877B3D6C52AD242923A506CD /* ALXRSAAsymmetricCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXRSAAsymmetricCryptor.m; sourceTree = "<group>"; };
 		6CA36C32656CC5AA9B583B2112A69103 /* Pods-ALXCrypto_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ALXCrypto_Tests-umbrella.h"; sourceTree = "<group>"; };
-		762C049D8B567A1191735DAC03D7D35B /* ALXCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ALXCrypto.modulemap; sourceTree = "<group>"; };
+		6EB98CDC93DEB195266023C7A6460C57 /* CocoaSecurity.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaSecurity.modulemap; sourceTree = "<group>"; };
+		6F0EDB50CE119556BBE6F89B07511231 /* Pods_ALXCrypto_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALXCrypto_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F532BDF9F3D381724555589BE90C9CA /* ALXECBSymmetricCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXECBSymmetricCryptor.h; sourceTree = "<group>"; };
+		7570261E6ACC7105B21202B26AE43D97 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		763FFE07E86F42E005280A655D46D309 /* ALXAsymmetricDecryptorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXAsymmetricDecryptorUtil.h; sourceTree = "<group>"; };
+		778FB84CDBC4682A453C720EEB1F213A /* CocoaSecurity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaSecurity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7925DCEA75D8DD6F8404C0A8CC996A53 /* Pods-ALXCrypto_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ALXCrypto_Example.release.xcconfig"; sourceTree = "<group>"; };
+		799DB0C7099EEA111EA92A95EDEA3F47 /* ALXSymmetricCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXSymmetricCryptor.m; sourceTree = "<group>"; };
 		81B6F2B345F82A2B6B575D637702BE48 /* Pods-ALXCrypto_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ALXCrypto_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		86545D3F03CD838A1DE13EAD989B152A /* ALXHMACCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXHMACCryptor.m; sourceTree = "<group>"; };
 		8E818823A2FB7D19D510929A193E08CF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		958E30DE6385937DA84A96D8AE919CFB /* Pods-ALXCrypto_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ALXCrypto_Example-umbrella.h"; sourceTree = "<group>"; };
+		97A0154162D553AC2BBC88FE4B250900 /* CocoaSecurity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CocoaSecurity.m; path = CocoaSecurity/CocoaSecurity.m; sourceTree = "<group>"; };
 		984C981ACDCF5D003822F895A93DADDE /* Pods-ALXCrypto_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ALXCrypto_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A14977538A926EE18A7A12DB98EEC74B /* ALXCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALXCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3A5C1C1BB8D1704BC8AB4E755EE8016 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C69C90FF21DF780D00468925 /* ALXCBCSymmetricCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXCBCSymmetricCryptor.h; sourceTree = "<group>"; };
-		C69C910021DF780D00468925 /* ALXCBCSymmetricCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXCBCSymmetricCryptor.m; sourceTree = "<group>"; };
-		C69C910221DF780D00468925 /* ALXECBSymmetricCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXECBSymmetricCryptor.m; sourceTree = "<group>"; };
-		C69C910321DF780D00468925 /* ALXECBSymmetricCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXECBSymmetricCryptor.h; sourceTree = "<group>"; };
-		C69C910521DF780D00468925 /* ALXSymmetricCryptoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXSymmetricCryptoUtil.m; sourceTree = "<group>"; };
-		C69C910621DF780D00468925 /* ALXSymmetricCryptoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXSymmetricCryptoUtil.h; sourceTree = "<group>"; };
-		C69C910721DF780D00468925 /* ALXSymmetricCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXSymmetricCryptor.h; sourceTree = "<group>"; };
-		C69C910821DF780D00468925 /* ALXSymmetricCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXSymmetricCryptor.m; sourceTree = "<group>"; };
-		C69C910A21DF780D00468925 /* ALXHashCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXHashCryptor.h; sourceTree = "<group>"; };
-		C69C910C21DF780D00468925 /* ALXHashCryptoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXHashCryptoUtil.h; sourceTree = "<group>"; };
-		C69C910D21DF780D00468925 /* ALXHashCryptoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXHashCryptoUtil.m; sourceTree = "<group>"; };
-		C69C910E21DF780D00468925 /* ALXHMACCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXHMACCryptor.m; sourceTree = "<group>"; };
-		C69C910F21DF780D00468925 /* ALXHashCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXHashCryptor.m; sourceTree = "<group>"; };
-		C69C911021DF780D00468925 /* ALXHMACCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXHMACCryptor.h; sourceTree = "<group>"; };
-		C69C911121DF780D00468925 /* ALXCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXCryptor.h; sourceTree = "<group>"; };
-		C69C911421DF780D00468925 /* ALXAsymmetricEncryptorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXAsymmetricEncryptorUtil.h; sourceTree = "<group>"; };
-		C69C911521DF780D00468925 /* ALXAsymmetricDecryptorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXAsymmetricDecryptorUtil.m; sourceTree = "<group>"; };
-		C69C911621DF780D00468925 /* ALXAsymmetricEncryptorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXAsymmetricEncryptorUtil.m; sourceTree = "<group>"; };
-		C69C911721DF780D00468925 /* ALXAsymmetricDecryptorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXAsymmetricDecryptorUtil.h; sourceTree = "<group>"; };
-		C69C911821DF780D00468925 /* ALXAsymmetricCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXAsymmetricCryptor.h; sourceTree = "<group>"; };
-		C69C911B21DF780D00468925 /* ALXRSAAsymmetricCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXRSAAsymmetricCryptor.m; sourceTree = "<group>"; };
-		C69C911C21DF780D00468925 /* ALXRSAAsymmetricCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALXRSAAsymmetricCryptor.h; sourceTree = "<group>"; };
-		C69C911D21DF780D00468925 /* ALXAsymmetricCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXAsymmetricCryptor.m; sourceTree = "<group>"; };
-		C69C911E21DF780D00468925 /* ALXCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALXCryptor.m; sourceTree = "<group>"; };
-		C6B4CCE621DE0DF800FFCEFA /* ALXCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ALXCrypto.h; path = ALXCrypto/Classes/ALXCrypto.h; sourceTree = "<group>"; };
+		997651E82A03BF42885DB906CE992D08 /* ALXCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ALXCrypto-dummy.m"; sourceTree = "<group>"; };
+		9B69D22B7DAAAA97F3E78DF0AB64189F /* ALXCrypto.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = ALXCrypto.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E7F2CA15CF1F4FE623CAB0972945F01 /* ALXHashCryptoUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXHashCryptoUtil.m; sourceTree = "<group>"; };
+		A08FD08C93D3DC9D20236540179CE9AB /* CocoaSecurity-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaSecurity-dummy.m"; sourceTree = "<group>"; };
+		A743E23E757D22B9D3FAAF9DBD8FE814 /* ALXECBSymmetricCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXECBSymmetricCryptor.m; sourceTree = "<group>"; };
+		AC52A6AC21D37A01B3AD444484C099A0 /* ALXCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALXCrypto-umbrella.h"; sourceTree = "<group>"; };
+		B8B9D2FB3872953198DA9C495B7B1442 /* ALXAsymmetricCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXAsymmetricCryptor.h; sourceTree = "<group>"; };
+		BAE578B2BAA35492F10FA81ECF0E781F /* ALXCrypto.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ALXCrypto.modulemap; sourceTree = "<group>"; };
+		BCA18494025F83F47D110B69C7ECB82D /* ALXCrypto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALXCrypto-prefix.pch"; sourceTree = "<group>"; };
+		BD498C6B7B8CE1E823451EAE8FDF65F8 /* CocoaSecurity-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaSecurity-prefix.pch"; sourceTree = "<group>"; };
+		C417DB1956F891A275F33CDACAFC5C90 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C6E0A2BD59ADF2A70795731F7CEF794E /* ALXSymmetricCryptoUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXSymmetricCryptoUtil.m; sourceTree = "<group>"; };
 		CD0239FE4A907827AD46631A3A52776B /* Pods-ALXCrypto_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXCrypto_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		D419EF7C83FB3F23AEF8F6B75C5E2195 /* ALXCrypto-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALXCrypto-umbrella.h"; sourceTree = "<group>"; };
+		CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D48A48315E6EC7D8C5D4C8415B431527 /* Pods-ALXCrypto_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ALXCrypto_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D7D107ABB706A9EEEB73A18D8FDF2A8C /* ALXCrypto.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = ALXCrypto.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D59E01DF4B11653789C10F84FC628CE1 /* CocoaSecurity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaSecurity.h; path = CocoaSecurity/CocoaSecurity.h; sourceTree = "<group>"; };
+		DAB443684A876D13AD97BCC13B958A70 /* ALXCrypto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALXCrypto.xcconfig; sourceTree = "<group>"; };
 		DDE4809416845425EE6F845B95081A28 /* Pods-ALXCrypto_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ALXCrypto_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DF16D9989004E74ACC8ED068166C1F66 /* Pods-ALXCrypto_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ALXCrypto_Example-frameworks.sh"; sourceTree = "<group>"; };
-		E95775F705BCAD278C137F1A1786B390 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F0AE38F8B185AD637F77E471B3334A68 /* ALXCrypto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ALXCrypto-dummy.m"; sourceTree = "<group>"; };
+		DFBD1F22B9F8E15FC2D36CE19A880684 /* Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = submodules/Base64/Base64/Base64.m; sourceTree = "<group>"; };
+		E0078A1CCC5FBF42015B3A04D777C963 /* CocoaSecurity.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaSecurity.xcconfig; sourceTree = "<group>"; };
+		E0A4D03900FCA5FE27311D7196FAE05E /* ALXAsymmetricDecryptorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXAsymmetricDecryptorUtil.m; sourceTree = "<group>"; };
+		EE725168850C66508EF113B209B8040C /* ALXCrypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALXCrypto.h; path = ALXCrypto/Classes/ALXCrypto.h; sourceTree = "<group>"; };
+		F39AF304AA141015003ED375D3F97E2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F376A4EA9664EDD2D5898FA1FA309D /* ALXCryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ALXCryptor.m; sourceTree = "<group>"; };
+		FB5DE4E691DB103CD36249F8EF99F600 /* ALXRSAAsymmetricCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ALXRSAAsymmetricCryptor.h; sourceTree = "<group>"; };
 		FCD1179130EC78D8007859E8DB9831BA /* Pods-ALXCrypto_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ALXCrypto_Tests.modulemap"; sourceTree = "<group>"; };
 		FDEF7DA427483BA37BA83C73219B2586 /* Pods-ALXCrypto_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ALXCrypto_Example-dummy.m"; sourceTree = "<group>"; };
+		FE09E4477585E4BCEEE591D89B8C0D5D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		85869A56FF50C81251E65CBCC915DED6 /* Frameworks */ = {
+		36363B24FEC960F68200927FC34A00FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42166D84EE0A4302E8662D98DB16BC43 /* Foundation.framework in Frameworks */,
+				F0146AC61B6A25E031D169C20A1DF401 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F97ABE86527651731EAEF38A65C1988 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F91B41296FD512CA807CD5B3B279F97 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,23 +178,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9483663F312987E4568605AB2365308E /* Frameworks */ = {
+		DAD10B07E13AC948D2DF21EBB777807F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC0636F01C926F729E0E8E1D6484B736 /* Foundation.framework in Frameworks */,
+				724F45D75B7A3717E5451E4255096C8B /* Foundation.framework in Frameworks */,
+				803DAA356A98141222FD171291D188D4 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FDE4FA334A58319C4387A4867693860 /* Development Pods */ = {
+		11ECCF3367941DEE413A9E14B4AB3773 /* CocoaSecurity */ = {
 			isa = PBXGroup;
 			children = (
-				F2258A1740757F6A2C05FB0C2136FCB1 /* ALXCrypto */,
+				073B4627A231E0B7C74E8D6B730F6EF9 /* Base64.h */,
+				DFBD1F22B9F8E15FC2D36CE19A880684 /* Base64.m */,
+				D59E01DF4B11653789C10F84FC628CE1 /* CocoaSecurity.h */,
+				97A0154162D553AC2BBC88FE4B250900 /* CocoaSecurity.m */,
+				CF95E14DF610F689E1475F43CA20AFE0 /* Support Files */,
 			);
-			name = "Development Pods";
+			path = CocoaSecurity;
+			sourceTree = "<group>";
+		};
+		158621F4BD15F80002EC8594ED096F0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				031284B6F43AE310E6C7AD2723BE1F68 /* ALXCrypto.framework */,
+				778FB84CDBC4682A453C720EEB1F213A /* CocoaSecurity.framework */,
+				4F5C5B0875A12BB94E4F4A7FA867EAD3 /* Pods_ALXCrypto_Example.framework */,
+				6F0EDB50CE119556BBE6F89B07511231 /* Pods_ALXCrypto_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B307E5F5300FCDBD4670AA9FC906872 /* ECB */ = {
+			isa = PBXGroup;
+			children = (
+				6F532BDF9F3D381724555589BE90C9CA /* ALXECBSymmetricCryptor.h */,
+				A743E23E757D22B9D3FAAF9DBD8FE814 /* ALXECBSymmetricCryptor.m */,
+			);
+			path = ECB;
+			sourceTree = "<group>";
+		};
+		241BAFFA477B7DDE3E2C87DEB8C59709 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				134AD15D0FE4A4C4F451B8A6B3CBFEFC /* ALXSymmetricCryptoUtil.h */,
+				C6E0A2BD59ADF2A70795731F7CEF794E /* ALXSymmetricCryptoUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3AA0815B762A7C3BF449186971EA41E0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4504680413A6A4D19098C5F769A4044E /* ALXHashCryptoUtil.h */,
+				9E7F2CA15CF1F4FE623CAB0972945F01 /* ALXHashCryptoUtil.m */,
+				1911C15621E1FBE700DA58FE /* ALXHMACCryptoUtil.h */,
+				1911C15721E1FBE700DA58FE /* ALXHMACCryptoUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				547FE7BE59B73C045A10943A669A2D8C /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4878BC858D7EB7C12D9C7644975F6341 /* Targets Support Files */ = {
@@ -185,37 +277,120 @@
 			path = "Target Support Files/Pods-ALXCrypto_Tests";
 			sourceTree = "<group>";
 		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+		547FE7BE59B73C045A10943A669A2D8C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+				CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */,
+				7570261E6ACC7105B21202B26AE43D97 /* Security.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		60E4E20B20C0947F3901F64E95C331DD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE578B2BAA35492F10FA81ECF0E781F /* ALXCrypto.modulemap */,
+				DAB443684A876D13AD97BCC13B958A70 /* ALXCrypto.xcconfig */,
+				997651E82A03BF42885DB906CE992D08 /* ALXCrypto-dummy.m */,
+				BCA18494025F83F47D110B69C7ECB82D /* ALXCrypto-prefix.pch */,
+				AC52A6AC21D37A01B3AD444484C099A0 /* ALXCrypto-umbrella.h */,
+				F39AF304AA141015003ED375D3F97E2C /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ALXCrypto";
+			sourceTree = "<group>";
+		};
+		6FD1923B5FBF0FEC9E94173B12BD7F73 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				82D2AB816B6918625376E943946E9974 /* RSA */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		70DE617B42812E9F030872BBD2E10499 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11ECCF3367941DEE413A9E14B4AB3773 /* CocoaSecurity */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7BA5479369297C4B164518AC07B83CED /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C29CBD51174872055D4E4542DBA62EB /* ALXCrypto */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7C29CBD51174872055D4E4542DBA62EB /* ALXCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				EE725168850C66508EF113B209B8040C /* ALXCrypto.h */,
+				9B51DEB699DF22785BFE29E30CEE65C5 /* Cryptor */,
+				D8D1FDCBBD2C385D1B3C05AEA6549C9C /* Pod */,
+				60E4E20B20C0947F3901F64E95C331DD /* Support Files */,
+			);
+			name = ALXCrypto;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				1FDE4FA334A58319C4387A4867693860 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F254517147508DB5C038AA360A97B42C /* Products */,
+				7BA5479369297C4B164518AC07B83CED /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				70DE617B42812E9F030872BBD2E10499 /* Pods */,
+				158621F4BD15F80002EC8594ED096F0F /* Products */,
 				4878BC858D7EB7C12D9C7644975F6341 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		860686A9BA46D0D9D397DC271221C281 /* Support Files */ = {
+		82D2AB816B6918625376E943946E9974 /* RSA */ = {
 			isa = PBXGroup;
 			children = (
-				762C049D8B567A1191735DAC03D7D35B /* ALXCrypto.modulemap */,
-				057D63B1AC1D79EA349864475AFC1043 /* ALXCrypto.xcconfig */,
-				F0AE38F8B185AD637F77E471B3334A68 /* ALXCrypto-dummy.m */,
-				5846C010867D2196D6BAD400849B103C /* ALXCrypto-prefix.pch */,
-				D419EF7C83FB3F23AEF8F6B75C5E2195 /* ALXCrypto-umbrella.h */,
-				01F408F1F2ACDCBB5CCC482AACF2854F /* Info.plist */,
+				FB5DE4E691DB103CD36249F8EF99F600 /* ALXRSAAsymmetricCryptor.h */,
+				6AE60961877B3D6C52AD242923A506CD /* ALXRSAAsymmetricCryptor.m */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ALXCrypto";
+			path = RSA;
+			sourceTree = "<group>";
+		};
+		842137D25C22B036318D88031690B1C4 /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				39DC68706A0DE36869A262809E820854 /* ALXHashCryptor.h */,
+				028FCB0212AA735718A6487833C0FB8A /* ALXHashCryptor.m */,
+				67E3A02F3E75FECC86CD07DF51B88A49 /* ALXHMACCryptor.h */,
+				86545D3F03CD838A1DE13EAD989B152A /* ALXHMACCryptor.m */,
+				3AA0815B762A7C3BF449186971EA41E0 /* Util */,
+			);
+			path = Hash;
+			sourceTree = "<group>";
+		};
+		9B51DEB699DF22785BFE29E30CEE65C5 /* Cryptor */ = {
+			isa = PBXGroup;
+			children = (
+				2DE66DCDD1FE7269940C62C7DDE69E30 /* ALXCryptor.h */,
+				F3F376A4EA9664EDD2D5898FA1FA309D /* ALXCryptor.m */,
+				9C70313CD0B03BEBDDC8C4AD640465BE /* Asymmetric */,
+				842137D25C22B036318D88031690B1C4 /* Hash */,
+				FF57F77B937001F46CF8DE171ACEC35F /* Symmetric */,
+			);
+			name = Cryptor;
+			path = ALXCrypto/Classes/Cryptor;
+			sourceTree = "<group>";
+		};
+		9C70313CD0B03BEBDDC8C4AD640465BE /* Asymmetric */ = {
+			isa = PBXGroup;
+			children = (
+				B8B9D2FB3872953198DA9C495B7B1442 /* ALXAsymmetricCryptor.h */,
+				2DE4A936253472F33F20E0A7027BA302 /* ALXAsymmetricCryptor.m */,
+				6FD1923B5FBF0FEC9E94173B12BD7F73 /* Algorithm */,
+				F0758C15A0CB8DFE95CE27FDCD8DF761 /* Util */,
+			);
+			path = Asymmetric;
 			sourceTree = "<group>";
 		};
 		9DA3D354D7A2932360A2BE9CA5688D21 /* Pods-ALXCrypto_Example */ = {
@@ -236,195 +411,92 @@
 			path = "Target Support Files/Pods-ALXCrypto_Example";
 			sourceTree = "<group>";
 		};
-		AF68026AA9CA579E4AD55EA01F028903 /* Pod */ = {
+		A7558FE4F8D885F6AF754C80974E5186 /* CBC */ = {
 			isa = PBXGroup;
 			children = (
-				D7D107ABB706A9EEEB73A18D8FDF2A8C /* ALXCrypto.podspec */,
-				E95775F705BCAD278C137F1A1786B390 /* LICENSE */,
-				C3A5C1C1BB8D1704BC8AB4E755EE8016 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C69C90FB21DF780C00468925 /* Cryptor */ = {
-			isa = PBXGroup;
-			children = (
-				C69C911121DF780D00468925 /* ALXCryptor.h */,
-				C69C911E21DF780D00468925 /* ALXCryptor.m */,
-				C69C910921DF780D00468925 /* Hash */,
-				C69C90FC21DF780D00468925 /* Symmetric */,
-				C69C911221DF780D00468925 /* Asymmetric */,
-			);
-			name = Cryptor;
-			path = ALXCrypto/Classes/Cryptor;
-			sourceTree = "<group>";
-		};
-		C69C90FC21DF780D00468925 /* Symmetric */ = {
-			isa = PBXGroup;
-			children = (
-				C69C910721DF780D00468925 /* ALXSymmetricCryptor.h */,
-				C69C910821DF780D00468925 /* ALXSymmetricCryptor.m */,
-				C69C90FD21DF780D00468925 /* Mode */,
-				C69C910421DF780D00468925 /* Util */,
-			);
-			path = Symmetric;
-			sourceTree = "<group>";
-		};
-		C69C90FD21DF780D00468925 /* Mode */ = {
-			isa = PBXGroup;
-			children = (
-				C69C90FE21DF780D00468925 /* CBC */,
-				C69C910121DF780D00468925 /* ECB */,
-			);
-			path = Mode;
-			sourceTree = "<group>";
-		};
-		C69C90FE21DF780D00468925 /* CBC */ = {
-			isa = PBXGroup;
-			children = (
-				C69C90FF21DF780D00468925 /* ALXCBCSymmetricCryptor.h */,
-				C69C910021DF780D00468925 /* ALXCBCSymmetricCryptor.m */,
+				4B51734152094A0AB679D4C6E78B0094 /* ALXCBCSymmetricCryptor.h */,
+				44071D88C8D184D26D3B523955C73DEF /* ALXCBCSymmetricCryptor.m */,
 			);
 			path = CBC;
 			sourceTree = "<group>";
 		};
-		C69C910121DF780D00468925 /* ECB */ = {
+		CF95E14DF610F689E1475F43CA20AFE0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C69C910321DF780D00468925 /* ALXECBSymmetricCryptor.h */,
-				C69C910221DF780D00468925 /* ALXECBSymmetricCryptor.m */,
+				6EB98CDC93DEB195266023C7A6460C57 /* CocoaSecurity.modulemap */,
+				E0078A1CCC5FBF42015B3A04D777C963 /* CocoaSecurity.xcconfig */,
+				A08FD08C93D3DC9D20236540179CE9AB /* CocoaSecurity-dummy.m */,
+				BD498C6B7B8CE1E823451EAE8FDF65F8 /* CocoaSecurity-prefix.pch */,
+				41A6C900FF7FD13AB46D1021AA73D5E4 /* CocoaSecurity-umbrella.h */,
+				FE09E4477585E4BCEEE591D89B8C0D5D /* Info.plist */,
 			);
-			path = ECB;
+			name = "Support Files";
+			path = "../Target Support Files/CocoaSecurity";
 			sourceTree = "<group>";
 		};
-		C69C910421DF780D00468925 /* Util */ = {
+		D8D1FDCBBD2C385D1B3C05AEA6549C9C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				C69C910621DF780D00468925 /* ALXSymmetricCryptoUtil.h */,
-				C69C910521DF780D00468925 /* ALXSymmetricCryptoUtil.m */,
+				9B69D22B7DAAAA97F3E78DF0AB64189F /* ALXCrypto.podspec */,
+				C417DB1956F891A275F33CDACAFC5C90 /* LICENSE */,
+				3E7D4BFE1FF383EE2C2AE02C7C17CBC6 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		DD5CB2ED83C546EE976140806C7E1742 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				A7558FE4F8D885F6AF754C80974E5186 /* CBC */,
+				1B307E5F5300FCDBD4670AA9FC906872 /* ECB */,
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		F0758C15A0CB8DFE95CE27FDCD8DF761 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				763FFE07E86F42E005280A655D46D309 /* ALXAsymmetricDecryptorUtil.h */,
+				E0A4D03900FCA5FE27311D7196FAE05E /* ALXAsymmetricDecryptorUtil.m */,
+				17FD178B622E4C5D60D372AE2B381316 /* ALXAsymmetricEncryptorUtil.h */,
+				1387012CDCF9FCAB87753529255E34B3 /* ALXAsymmetricEncryptorUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
 		};
-		C69C910921DF780D00468925 /* Hash */ = {
+		FF57F77B937001F46CF8DE171ACEC35F /* Symmetric */ = {
 			isa = PBXGroup;
 			children = (
-				C69C910A21DF780D00468925 /* ALXHashCryptor.h */,
-				C69C910F21DF780D00468925 /* ALXHashCryptor.m */,
-				C69C911021DF780D00468925 /* ALXHMACCryptor.h */,
-				C69C910E21DF780D00468925 /* ALXHMACCryptor.m */,
-				C69C910B21DF780D00468925 /* Util */,
+				169E710D096D74DCF464422BEF934E23 /* ALXSymmetricCryptor.h */,
+				799DB0C7099EEA111EA92A95EDEA3F47 /* ALXSymmetricCryptor.m */,
+				DD5CB2ED83C546EE976140806C7E1742 /* Mode */,
+				241BAFFA477B7DDE3E2C87DEB8C59709 /* Util */,
 			);
-			path = Hash;
-			sourceTree = "<group>";
-		};
-		C69C910B21DF780D00468925 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				C69C910C21DF780D00468925 /* ALXHashCryptoUtil.h */,
-				C69C910D21DF780D00468925 /* ALXHashCryptoUtil.m */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		C69C911221DF780D00468925 /* Asymmetric */ = {
-			isa = PBXGroup;
-			children = (
-				C69C911821DF780D00468925 /* ALXAsymmetricCryptor.h */,
-				C69C911D21DF780D00468925 /* ALXAsymmetricCryptor.m */,
-				C69C911921DF780D00468925 /* Algorithm */,
-				C69C911321DF780D00468925 /* Util */,
-			);
-			path = Asymmetric;
-			sourceTree = "<group>";
-		};
-		C69C911321DF780D00468925 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				C69C911421DF780D00468925 /* ALXAsymmetricEncryptorUtil.h */,
-				C69C911621DF780D00468925 /* ALXAsymmetricEncryptorUtil.m */,
-				C69C911721DF780D00468925 /* ALXAsymmetricDecryptorUtil.h */,
-				C69C911521DF780D00468925 /* ALXAsymmetricDecryptorUtil.m */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		C69C911921DF780D00468925 /* Algorithm */ = {
-			isa = PBXGroup;
-			children = (
-				C69C911A21DF780D00468925 /* RSA */,
-			);
-			path = Algorithm;
-			sourceTree = "<group>";
-		};
-		C69C911A21DF780D00468925 /* RSA */ = {
-			isa = PBXGroup;
-			children = (
-				C69C911C21DF780D00468925 /* ALXRSAAsymmetricCryptor.h */,
-				C69C911B21DF780D00468925 /* ALXRSAAsymmetricCryptor.m */,
-			);
-			path = RSA;
-			sourceTree = "<group>";
-		};
-		F2258A1740757F6A2C05FB0C2136FCB1 /* ALXCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				C6B4CCE621DE0DF800FFCEFA /* ALXCrypto.h */,
-				C69C90FB21DF780C00468925 /* Cryptor */,
-				AF68026AA9CA579E4AD55EA01F028903 /* Pod */,
-				860686A9BA46D0D9D397DC271221C281 /* Support Files */,
-			);
-			name = ALXCrypto;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		F254517147508DB5C038AA360A97B42C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A14977538A926EE18A7A12DB98EEC74B /* ALXCrypto.framework */,
-				37EC2CFAE62E323FEA829471FAE25A3F /* Pods_ALXCrypto_Example.framework */,
-				6845A9BA98D50112D23A25BB2F740316 /* Pods_ALXCrypto_Tests.framework */,
-			);
-			name = Products;
+			path = Symmetric;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		31C6BFEE7DC5B6E2C66AF249BAC30FE3 /* Headers */ = {
+		7EB7EB7E00C7FC579DDB86E79DAB7E97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E9C40B18126A229BF25CD298CE69ED /* ALXCrypto-umbrella.h in Headers */,
-				C69C912821DF780D00468925 /* ALXHashCryptoUtil.h in Headers */,
-				C69C912221DF780D00468925 /* ALXECBSymmetricCryptor.h in Headers */,
-				C69C912721DF780D00468925 /* ALXHashCryptor.h in Headers */,
-				C69C912C21DF780D00468925 /* ALXHMACCryptor.h in Headers */,
-				C69C912E21DF780D00468925 /* ALXAsymmetricEncryptorUtil.h in Headers */,
-				C69C912521DF780D00468925 /* ALXSymmetricCryptor.h in Headers */,
-				C69C913121DF780D00468925 /* ALXAsymmetricDecryptorUtil.h in Headers */,
-				C69C913221DF780D00468925 /* ALXAsymmetricCryptor.h in Headers */,
-				C6B4CCE821DE0DF800FFCEFA /* ALXCrypto.h in Headers */,
-				C69C912421DF780D00468925 /* ALXSymmetricCryptoUtil.h in Headers */,
-				C69C912D21DF780D00468925 /* ALXCryptor.h in Headers */,
-				C69C911F21DF780D00468925 /* ALXCBCSymmetricCryptor.h in Headers */,
-				C69C913421DF780D00468925 /* ALXRSAAsymmetricCryptor.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C871605E525F96CD1746F94FC1D3BB7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC86FA9FE0B21B2AE5A98CA5CC2EC2A5 /* Pods-ALXCrypto_Example-umbrella.h in Headers */,
+				25A4F87E4913FE9FE80C13DA49AE561A /* ALXAsymmetricCryptor.h in Headers */,
+				BE6EE28BB6E54D13907E674AC7DF6B2E /* ALXAsymmetricDecryptorUtil.h in Headers */,
+				CD839EAC20ED0E509AA03BE6FEBCCF96 /* ALXAsymmetricEncryptorUtil.h in Headers */,
+				87E0DB7B9CDA62448F1480BC2BEC82F8 /* ALXCBCSymmetricCryptor.h in Headers */,
+				A8120F1B331C2E2C6F902F01164B8163 /* ALXCrypto-umbrella.h in Headers */,
+				8A2A927F6781E87CBAADE71615414A75 /* ALXCrypto.h in Headers */,
+				F627D1A41ECA84BBCC3AE6CFDA157C65 /* ALXCryptor.h in Headers */,
+				1911C15821E1FBE700DA58FE /* ALXHMACCryptoUtil.h in Headers */,
+				D49750CD4E95517E94BB48EFDD4C0D84 /* ALXECBSymmetricCryptor.h in Headers */,
+				D14CC9B41B90622558F3B5B41CCBE893 /* ALXHashCryptor.h in Headers */,
+				4A353B5C67649A33DB6A0347FC70F772 /* ALXHashCryptoUtil.h in Headers */,
+				77A8C5558EF5FA648C37BBB7DA11DA57 /* ALXHMACCryptor.h in Headers */,
+				CDBFA4D15FABA873435F660C4FF7A8F1 /* ALXRSAAsymmetricCryptor.h in Headers */,
+				7D04613D0B1302DB1FACC477FD6D3FDC /* ALXSymmetricCryptor.h in Headers */,
+				AE514E222602010224F4229FD0D7B357 /* ALXSymmetricCryptoUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,16 +508,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C419A769F3E53C822D5EECB60D0561D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA9A7AF5B67C339BFC53799BFA4286F5 /* Pods-ALXCrypto_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66340A46C5607B311080B338F4F9986 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F98F9A32C528DF55CE3902FC2295694C /* Base64.h in Headers */,
+				0CABC146B7AE68D57FFCADE2BE7043A5 /* CocoaSecurity-umbrella.h in Headers */,
+				A5BC08E8A9629CE48ACA2C7C9050CA1D /* CocoaSecurity.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6CADAB2A05CD453DBD510BDB994378B3 /* ALXCrypto */ = {
+		1CE15060B0E33F7AE0A78865CFACF946 /* CocoaSecurity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DB74FB04E8EE72FE4875E1AE4E66041 /* Build configuration list for PBXNativeTarget "ALXCrypto" */;
+			buildConfigurationList = 93516C885C0F185BEA0221B8BAC8C1D4 /* Build configuration list for PBXNativeTarget "CocoaSecurity" */;
 			buildPhases = (
-				F59A2FC03028DF3BCAD8B23B8958EB05 /* Sources */,
-				9483663F312987E4568605AB2365308E /* Frameworks */,
-				31C6BFEE7DC5B6E2C66AF249BAC30FE3 /* Headers */,
+				B7526EE14C4407BD3415191FF9035300 /* Sources */,
+				36363B24FEC960F68200927FC34A00FE /* Frameworks */,
+				B66340A46C5607B311080B338F4F9986 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaSecurity;
+			productName = CocoaSecurity;
+			productReference = 778FB84CDBC4682A453C720EEB1F213A /* CocoaSecurity.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2EC916865DCE762334023786F33E4989 /* ALXCrypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACF4250F163DCE318AF38D4EF8A3DBA5 /* Build configuration list for PBXNativeTarget "ALXCrypto" */;
+			buildPhases = (
+				FC853294EC5C4C0027C45FA12D0C50B1 /* Sources */,
+				DAD10B07E13AC948D2DF21EBB777807F /* Frameworks */,
+				7EB7EB7E00C7FC579DDB86E79DAB7E97 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -453,7 +560,26 @@
 			);
 			name = ALXCrypto;
 			productName = ALXCrypto;
-			productReference = A14977538A926EE18A7A12DB98EEC74B /* ALXCrypto.framework */;
+			productReference = 031284B6F43AE310E6C7AD2723BE1F68 /* ALXCrypto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D62F9852D7915BBE88D113E1D35E9AB7 /* Pods-ALXCrypto_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D88BF7964B872CB106584B466EC7BFC /* Build configuration list for PBXNativeTarget "Pods-ALXCrypto_Example" */;
+			buildPhases = (
+				7921D4CCD4BBD6ACFC8EA54F47EC9EE5 /* Sources */,
+				3F97ABE86527651731EAEF38A65C1988 /* Frameworks */,
+				8C419A769F3E53C822D5EECB60D0561D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				739AA8A971F3B56349BD43181317D997 /* PBXTargetDependency */,
+				4AE3164E650A3EFB95694F6CD2CC1DF9 /* PBXTargetDependency */,
+			);
+			name = "Pods-ALXCrypto_Example";
+			productName = "Pods-ALXCrypto_Example";
+			productReference = 4F5C5B0875A12BB94E4F4A7FA867EAD3 /* Pods_ALXCrypto_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E5793B0FF15C41BC19FBBBCA3854A890 /* Pods-ALXCrypto_Tests */ = {
@@ -471,25 +597,7 @@
 			);
 			name = "Pods-ALXCrypto_Tests";
 			productName = "Pods-ALXCrypto_Tests";
-			productReference = 6845A9BA98D50112D23A25BB2F740316 /* Pods_ALXCrypto_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F0C4B159DC49758D4887D7192D9203AA /* Pods-ALXCrypto_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1AC5C09BCC70A4758B9AB77F14802B77 /* Build configuration list for PBXNativeTarget "Pods-ALXCrypto_Example" */;
-			buildPhases = (
-				2EA9FC2C3A69254DEFD4CA46783A8444 /* Sources */,
-				85869A56FF50C81251E65CBCC915DED6 /* Frameworks */,
-				5C871605E525F96CD1746F94FC1D3BB7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C40DC03914CDB7A3A5519FDF917B52FA /* PBXTargetDependency */,
-			);
-			name = "Pods-ALXCrypto_Example";
-			productName = "Pods-ALXCrypto_Example";
-			productReference = 37EC2CFAE62E323FEA829471FAE25A3F /* Pods_ALXCrypto_Example.framework */;
+			productReference = 6F0EDB50CE119556BBE6F89B07511231 /* Pods_ALXCrypto_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -509,23 +617,34 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F254517147508DB5C038AA360A97B42C /* Products */;
+			productRefGroup = 158621F4BD15F80002EC8594ED096F0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6CADAB2A05CD453DBD510BDB994378B3 /* ALXCrypto */,
-				F0C4B159DC49758D4887D7192D9203AA /* Pods-ALXCrypto_Example */,
+				2EC916865DCE762334023786F33E4989 /* ALXCrypto */,
+				1CE15060B0E33F7AE0A78865CFACF946 /* CocoaSecurity */,
+				D62F9852D7915BBE88D113E1D35E9AB7 /* Pods-ALXCrypto_Example */,
 				E5793B0FF15C41BC19FBBBCA3854A890 /* Pods-ALXCrypto_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2EA9FC2C3A69254DEFD4CA46783A8444 /* Sources */ = {
+		7921D4CCD4BBD6ACFC8EA54F47EC9EE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2B7B22776ACCF17632774EB3812FB3F /* Pods-ALXCrypto_Example-dummy.m in Sources */,
+				9C9469714658BACCFB803ED6673AE529 /* Pods-ALXCrypto_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7526EE14C4407BD3415191FF9035300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8436B88A9D95EB840C84022CD613EFB0 /* Base64.m in Sources */,
+				0A539197F1612A9881DBE93BC55AE9CA /* CocoaSecurity-dummy.m in Sources */,
+				C308C48E9C57707306F8580AE37248B2 /* CocoaSecurity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,23 +656,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F59A2FC03028DF3BCAD8B23B8958EB05 /* Sources */ = {
+		FC853294EC5C4C0027C45FA12D0C50B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C69C912921DF780D00468925 /* ALXHashCryptoUtil.m in Sources */,
-				C69C912321DF780D00468925 /* ALXSymmetricCryptoUtil.m in Sources */,
-				C69C912A21DF780D00468925 /* ALXHMACCryptor.m in Sources */,
-				C69C912021DF780D00468925 /* ALXCBCSymmetricCryptor.m in Sources */,
-				CAB00F22CDB59FE08EE546A02302C46D /* ALXCrypto-dummy.m in Sources */,
-				C69C912621DF780D00468925 /* ALXSymmetricCryptor.m in Sources */,
-				C69C913021DF780D00468925 /* ALXAsymmetricEncryptorUtil.m in Sources */,
-				C69C913521DF780D00468925 /* ALXAsymmetricCryptor.m in Sources */,
-				C69C912121DF780D00468925 /* ALXECBSymmetricCryptor.m in Sources */,
-				C69C912B21DF780D00468925 /* ALXHashCryptor.m in Sources */,
-				C69C913321DF780D00468925 /* ALXRSAAsymmetricCryptor.m in Sources */,
-				C69C913621DF780D00468925 /* ALXCryptor.m in Sources */,
-				C69C912F21DF780D00468925 /* ALXAsymmetricDecryptorUtil.m in Sources */,
+				FB0281FE85EA475A5805DD8AAB718CC3 /* ALXAsymmetricCryptor.m in Sources */,
+				3011EFEBEA79719376FD7DB08EF60006 /* ALXAsymmetricDecryptorUtil.m in Sources */,
+				7B6D9DA2D6ED58C8359D8C5EA67CD4C5 /* ALXAsymmetricEncryptorUtil.m in Sources */,
+				3477A27FAAD4002DD5679BBBC2890C59 /* ALXCBCSymmetricCryptor.m in Sources */,
+				3FE0B8F4B2596D8EEE3DEB5355C69432 /* ALXCrypto-dummy.m in Sources */,
+				774440324F214F2CC6C2AC247CFA27B2 /* ALXCryptor.m in Sources */,
+				6EC4ABD955A7A208A410E0077A695709 /* ALXECBSymmetricCryptor.m in Sources */,
+				E2E92353562C38E50427D5490BC272D7 /* ALXHashCryptor.m in Sources */,
+				19CFFD0C2DD9583F3A8997B3109D1801 /* ALXHashCryptoUtil.m in Sources */,
+				28A273BECF816DF6E570C023E67513BE /* ALXHMACCryptor.m in Sources */,
+				9027CA7DD72137607B6D6ACA158EA846 /* ALXRSAAsymmetricCryptor.m in Sources */,
+				1911C15921E1FBE700DA58FE /* ALXHMACCryptoUtil.m in Sources */,
+				4D473486156ED9883060AE338E919439 /* ALXSymmetricCryptor.m in Sources */,
+				F0EE4063977CD84EF25CFE0E644A41B7 /* ALXSymmetricCryptoUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,53 +683,25 @@
 		11ECF152E729D01EF58C56969789EB7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ALXCrypto_Example";
-			target = F0C4B159DC49758D4887D7192D9203AA /* Pods-ALXCrypto_Example */;
+			target = D62F9852D7915BBE88D113E1D35E9AB7 /* Pods-ALXCrypto_Example */;
 			targetProxy = 1A74D9785BF4C52C11C597C1239DE485 /* PBXContainerItemProxy */;
 		};
-		C40DC03914CDB7A3A5519FDF917B52FA /* PBXTargetDependency */ = {
+		4AE3164E650A3EFB95694F6CD2CC1DF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaSecurity;
+			target = 1CE15060B0E33F7AE0A78865CFACF946 /* CocoaSecurity */;
+			targetProxy = 4D5DDFCAC8CEC1F6E34F1AAB4294C8E5 /* PBXContainerItemProxy */;
+		};
+		739AA8A971F3B56349BD43181317D997 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ALXCrypto;
-			target = 6CADAB2A05CD453DBD510BDB994378B3 /* ALXCrypto */;
-			targetProxy = 0BA8EADD2490C1BE5120320FBDACA9BE /* PBXContainerItemProxy */;
+			target = 2EC916865DCE762334023786F33E4989 /* ALXCrypto */;
+			targetProxy = 018140A0A3604531CF0AC2C253F5FB52 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01BF9B3A278ED2C257DDE72A4218882D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7925DCEA75D8DD6F8404C0A8CC996A53 /* Pods-ALXCrypto_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ALXCrypto_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ALXCrypto_Example/Pods-ALXCrypto_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		13E8701C792E6A3DD73DAD736B50A4F6 /* Debug */ = {
+		0103045BD50EACBA1AF2C3C9FD06CFC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A544B9F3B5B9B74A23402B1893D2631 /* Pods-ALXCrypto_Example.debug.xcconfig */;
 			buildSettings = {
@@ -705,10 +797,11 @@
 			};
 			name = Debug;
 		};
-		3D010D969581F21C13BA989089D0E8F2 /* Debug */ = {
+		46E938C3FA04936CD85E1B22CA22C0BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 057D63B1AC1D79EA349864475AFC1043 /* ALXCrypto.xcconfig */;
+			baseConfigurationReference = 7925DCEA75D8DD6F8404C0A8CC996A53 /* Pods-ALXCrypto_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -718,22 +811,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ALXCrypto/ALXCrypto-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ALXCrypto/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ALXCrypto_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ALXCrypto/ALXCrypto.modulemap";
-				PRODUCT_MODULE_NAME = ALXCrypto;
-				PRODUCT_NAME = ALXCrypto;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ALXCrypto_Example/Pods-ALXCrypto_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		70247DE75FF9DB972F8F5687841A7AF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -768,9 +864,39 @@
 			};
 			name = Debug;
 		};
-		91195F4CECCDDBE6B8FBA2695C58BC94 /* Release */ = {
+		A8778CECAF2D80FD2096F4C01D27E52C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 057D63B1AC1D79EA349864475AFC1043 /* ALXCrypto.xcconfig */;
+			baseConfigurationReference = DAB443684A876D13AD97BCC13B958A70 /* ALXCrypto.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ALXCrypto/ALXCrypto-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ALXCrypto/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ALXCrypto/ALXCrypto.modulemap";
+				PRODUCT_MODULE_NAME = ALXCrypto;
+				PRODUCT_NAME = ALXCrypto;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E3638359A02CEBFBF88E66DD2B14F5C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAB443684A876D13AD97BCC13B958A70 /* ALXCrypto.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -857,6 +983,37 @@
 			};
 			name = Release;
 		};
+		F51B6047C20B6BADC87F8C9D27A47BF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0078A1CCC5FBF42015B3A04D777C963 /* CocoaSecurity.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaSecurity/CocoaSecurity-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaSecurity/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaSecurity/CocoaSecurity.modulemap";
+				PRODUCT_MODULE_NAME = CocoaSecurity;
+				PRODUCT_NAME = CocoaSecurity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F7AD908730BF996E92ED0BCC963C6633 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DDE4809416845425EE6F845B95081A28 /* Pods-ALXCrypto_Tests.release.xcconfig */;
@@ -891,18 +1048,39 @@
 			};
 			name = Release;
 		};
+		FE17204DC259F516D2FA47F21B7C16F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0078A1CCC5FBF42015B3A04D777C963 /* CocoaSecurity.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaSecurity/CocoaSecurity-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaSecurity/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CocoaSecurity/CocoaSecurity.modulemap";
+				PRODUCT_MODULE_NAME = CocoaSecurity;
+				PRODUCT_NAME = CocoaSecurity;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1AC5C09BCC70A4758B9AB77F14802B77 /* Build configuration list for PBXNativeTarget "Pods-ALXCrypto_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				13E8701C792E6A3DD73DAD736B50A4F6 /* Debug */,
-				01BF9B3A278ED2C257DDE72A4218882D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -912,11 +1090,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DB74FB04E8EE72FE4875E1AE4E66041 /* Build configuration list for PBXNativeTarget "ALXCrypto" */ = {
+		93516C885C0F185BEA0221B8BAC8C1D4 /* Build configuration list for PBXNativeTarget "CocoaSecurity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D010D969581F21C13BA989089D0E8F2 /* Debug */,
-				91195F4CECCDDBE6B8FBA2695C58BC94 /* Release */,
+				FE17204DC259F516D2FA47F21B7C16F1 /* Debug */,
+				F51B6047C20B6BADC87F8C9D27A47BF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D88BF7964B872CB106584B466EC7BFC /* Build configuration list for PBXNativeTarget "Pods-ALXCrypto_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0103045BD50EACBA1AF2C3C9FD06CFC5 /* Debug */,
+				46E938C3FA04936CD85E1B22CA22C0BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACF4250F163DCE318AF38D4EF8A3DBA5 /* Build configuration list for PBXNativeTarget "ALXCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8778CECAF2D80FD2096F4C01D27E52C /* Debug */,
+				E3638359A02CEBFBF88E66DD2B14F5C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

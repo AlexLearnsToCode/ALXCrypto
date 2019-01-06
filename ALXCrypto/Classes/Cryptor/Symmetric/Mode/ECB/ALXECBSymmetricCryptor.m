@@ -18,81 +18,83 @@
     if (![super encrypt:plaintext].length) {
         return @"";
     }
-    NSData* data = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
     
     ALXSymmetricCryptoUtil *encryptorUtil = [[ALXSymmetricCryptoUtil alloc] initWithSymmetricCryptor:self];
     if (!encryptorUtil) {
         return @"";
     }
     encryptorUtil.operation = kCCEncrypt;
+    plaintext = [encryptorUtil addPaddingToString:plaintext];
     
-    // key
-    char keyPtr[kCCKeySizeAES256+1];
+    NSMutableData *contentData = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
+    NSUInteger dataLength = contentData.length;
+    
+    // 为结束符'\\0' +1
+    char keyPtr[encryptorUtil.keySize + 1];
     memset(keyPtr, 0, sizeof(keyPtr));
     [self.key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    
-    // result
-    size_t bufferSize = [data length] + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesEncrypted = 0;
+    // 密文长度 <= 明文长度 + BlockSize
+    size_t encryptSize = dataLength + encryptorUtil.blockSize;
+    void *encryptedBytes = malloc(encryptSize);
+    size_t actualOutSize = 0;
     
     CCCryptorStatus cryptStatus = CCCrypt(encryptorUtil.operation,
-                                          self.algorithm,
-                                          encryptorUtil.options,
+                                          encryptorUtil.algorithm,
+                                          encryptorUtil.options,  // 系统默认使用 CBC，然后指明使用 PKCS7Padding
                                           keyPtr,
-                                          [self.key length],
+                                          encryptorUtil.keySize,
                                           NULL,
-                                          [data bytes],
-                                          [data length],
-                                          buffer,
-                                          bufferSize,
-                                          &numBytesEncrypted);
-    
+                                          contentData.bytes,
+                                          dataLength,
+                                          encryptedBytes,
+                                          encryptSize,
+                                          &actualOutSize);
     if (cryptStatus == kCCSuccess) {
-        return [encryptorUtil resultStringWithBytes:buffer length:numBytesEncrypted];
+        // 对加密后的数据进行 base64 编码
+        return [[NSData dataWithBytesNoCopy:encryptedBytes length:actualOutSize] base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     }
-    free(buffer);
+    free(encryptedBytes);
     return @"";
+
 }
 
 - (NSString *)decrypt:(NSString *)ciphertext{
     if (![super decrypt:ciphertext].length) {
         return @"";
     }
-    NSData* data = [ciphertext dataUsingEncoding:NSUTF8StringEncoding];
     
     ALXSymmetricCryptoUtil *decryptorUtil = [[ALXSymmetricCryptoUtil alloc] initWithSymmetricCryptor:self];
     if (!decryptorUtil) {
         return @"";
     }
     decryptorUtil.operation = kCCDecrypt;
+    ciphertext = [decryptorUtil removePaddingFromString:ciphertext];
     
-    // key
-    char keyPtr[kCCKeySizeAES256+1];
+    // 把 base64 String 转换成 Data
+    NSData *contentData = [[NSData alloc] initWithBase64EncodedString:ciphertext options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    NSUInteger dataLength = contentData.length;
+    char keyPtr[decryptorUtil.keySize + 1];
     memset(keyPtr, 0, sizeof(keyPtr));
     [self.key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    
-    // result
-    size_t bufferSize = [data length] + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesEncrypted = 0;
+    size_t decryptSize = dataLength + decryptorUtil.blockSize;
+    void *decryptedBytes = malloc(decryptSize);
+    size_t actualOutSize = 0;
     
     CCCryptorStatus cryptStatus = CCCrypt(decryptorUtil.operation,
-                                          self.algorithm,
+                                          decryptorUtil.algorithm,
                                           decryptorUtil.options,
                                           keyPtr,
-                                          [self.key length],
+                                          decryptorUtil.keySize,
                                           NULL,
-                                          [data bytes],
-                                          [data length],
-                                          buffer,
-                                          bufferSize,
-                                          &numBytesEncrypted);
-    
+                                          contentData.bytes,
+                                          dataLength,
+                                          decryptedBytes,
+                                          decryptSize,
+                                          &actualOutSize);
     if (cryptStatus == kCCSuccess) {
-        return [decryptorUtil resultStringWithBytes:buffer length:numBytesEncrypted];
+        return [[NSString alloc] initWithData:[NSData dataWithBytesNoCopy:decryptedBytes length:actualOutSize] encoding:NSUTF8StringEncoding];
     }
-    free(buffer);
+    free(decryptedBytes);
     return @"";
 }
 

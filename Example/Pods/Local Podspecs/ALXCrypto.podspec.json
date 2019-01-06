@@ -1,7 +1,7 @@
 {
   "name": "ALXCrypto",
   "version": "0.1.0",
-  "summary": "A short description of ALXCrypto.",
+  "summary": "An easy crypto tool.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/alexlearnstocode/ALXCrypto",
   "license": {
@@ -15,8 +15,13 @@
     "git": "https://github.com/alexlearnstocode/ALXCrypto.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://www.jianshu.com/u/fb6f45f5a7f6",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "ALXCrypto/Classes/**/*"
+  "source_files": "ALXCrypto/Classes/**/*",
+  "frameworks": [
+    "Foundation",
+    "Security"
+  ]
 }

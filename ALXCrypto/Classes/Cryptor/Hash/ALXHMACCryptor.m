@@ -6,7 +6,7 @@
 //
 
 #import "ALXHMACCryptor.h"
-#import "ALXHashCryptoUtil.h"
+#import "ALXHMACCryptoUtil.h"
 #import <CommonCrypto/CommonCrypto.h>
 
 @implementation ALXHMACCryptor
@@ -17,7 +17,7 @@
     }
     const char *input = plaintext.UTF8String;
     
-    ALXHashCryptoUtil *hmacUtil = [[ALXHashCryptoUtil alloc] initWithHashCryptor:self];
+    ALXHMACCryptoUtil *hmacUtil = [[ALXHMACCryptoUtil alloc] initWithHMACCryptor:self];
     if (!hmacUtil) {
         return @"";
     }
@@ -27,7 +27,7 @@
     
     CCHmac(hmacUtil.hmacAlgorithm, keyData, strlen(keyData), input, strlen(input), result);
     
-    return [hmacUtil hashStringWithBytes:result];
+    return [hmacUtil hmacStringWithBytes:result];
 }
 
 @end

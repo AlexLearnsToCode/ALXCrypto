@@ -5,24 +5,17 @@
 //  Created by Alexgao on 2019/1/3.
 //
 
-#import "ALXCryptoDefines.h"
+#import "ALXCryptor.h"
 
-#pragma mark - Encrypt
-#import "ALXEncrypt.h"
-#import "ALXEncryptor.h"
-#import "ALXHashEncryptor.h"
-#import "ALXHMACEncryptor.h"
-#import "ALXSymmetricEncryptor.h"
-#import "ALXCBCSymmetricEncryptor.h"
-#import "ALXECBSymmetricEncryptor.h"
-#import "ALXAsymmetricEncryptor.h"
-#import "ALXRSAAsymmetricEncryptor.h"
+#pragma mark - Hash
+#import "ALXHashCryptor.h"
+#import "ALXHMACCryptor.h"
 
-#pragma mark - Decrypt
-#import "ALXDecrypt.h"
-#import "ALXDecryptor.h"
-#import "ALXSymmetricDecryptor.h"
-#import "ALXCBCSymmetricDecryptor.h"
-#import "ALXECBSymmetricDecryptor.h"
-#import "ALXAsymmetricDecryptor.h"
-#import "ALXRSAAsymmetricDecryptor.h"
+#pragma mark - Symmetric
+#import "ALXSymmetricCryptor.h"
+#import "ALXCBCSymmetricCryptor.h"
+#import "ALXECBSymmetricCryptor.h"
+
+#pragma mark - Asymmetric
+#import "ALXAsymmetricCryptor.h"
+#import "ALXRSAAsymmetricCryptor.h"

@@ -10,6 +10,19 @@
 #endif
 #endif
 
+#import "ALXCrypto.h"
+#import "ALXCryptor.h"
+#import "ALXRSAAsymmetricCryptor.h"
+#import "ALXAsymmetricCryptor.h"
+#import "ALXAsymmetricDecryptorUtil.h"
+#import "ALXAsymmetricEncryptorUtil.h"
+#import "ALXHashCryptor.h"
+#import "ALXHMACCryptor.h"
+#import "ALXHashCryptoUtil.h"
+#import "ALXSymmetricCryptor.h"
+#import "ALXCBCSymmetricCryptor.h"
+#import "ALXECBSymmetricCryptor.h"
+#import "ALXSymmetricCryptoUtil.h"
 
 FOUNDATION_EXPORT double ALXCryptoVersionNumber;
 FOUNDATION_EXPORT const unsigned char ALXCryptoVersionString[];

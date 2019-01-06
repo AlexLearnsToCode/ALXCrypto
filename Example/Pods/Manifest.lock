@@ -1,16 +1,23 @@
 PODS:
   - ALXCrypto (0.1.0)
+  - CocoaSecurity (1.2.4)
 
 DEPENDENCIES:
   - ALXCrypto (from `../`)
+  - CocoaSecurity
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaSecurity
 
 EXTERNAL SOURCES:
   ALXCrypto:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ALXCrypto: fc1ff02d85f652902c0f94b901ffcbe2cfa3447d
+  ALXCrypto: ead861db0dcb3c310fb3b69fc59b006b7fd838c2
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
 
-PODFILE CHECKSUM: 71d30349b3a1f6ff31a7aea395c80177373217fe
+PODFILE CHECKSUM: 43b124f12e0731109d9e55f1290b2c030c850576
 
 COCOAPODS: 1.5.3

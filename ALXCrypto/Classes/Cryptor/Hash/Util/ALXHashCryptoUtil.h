@@ -17,10 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int resultLength;
 @property (nonatomic) BOOL uppercase;
 
-@property (nonatomic) CCHmacAlgorithm hmacAlgorithm;
-
 - (instancetype)initWithHashCryptor:(ALXHashCryptor *)hashCryptor;
-//- (instancetype)initWithHmacCryptor:(ALXHMACEncryptor *)hmacCryptor;
 
 - (NSString *)hashStringWithBytes:(uint8_t *)result;
 

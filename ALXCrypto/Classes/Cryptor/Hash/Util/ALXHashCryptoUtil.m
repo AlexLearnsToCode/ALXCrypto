@@ -12,12 +12,10 @@
 static int ALXLengthFromHashAlgorithm(ALXHashAlgorithm algorithm) {
     switch (algorithm) {
         case ALXHashAlgorithmmd516:
-        case ALXHashAlgorithmMD516:{
-            return CC_MD5_DIGEST_LENGTH;
-        }
+        case ALXHashAlgorithmMD516:
         case ALXHashAlgorithmmd532:
         case ALXHashAlgorithmMD532:{
-            return CC_MD5_DIGEST_LENGTH * 2;
+            return CC_MD5_DIGEST_LENGTH;
         }
         case ALXHashAlgorithmSHA1:{
             return CC_SHA1_DIGEST_LENGTH;
@@ -50,31 +48,13 @@ static BOOL ALXUppercaseFromHashAlgorithm(ALXHashAlgorithm algorithm) {
     }
 }
 
-static CCHmacAlgorithm ALXHmacAlgorithmFromHashAlgorithm(ALXHashAlgorithm algorithm) {
-    switch (algorithm) {
-        case ALXHashAlgorithmmd516:
-        case ALXHashAlgorithmMD516:
-        case ALXHashAlgorithmmd532:
-        case ALXHashAlgorithmMD532:{
-            return kCCHmacAlgMD5;
-        }
-        case ALXHashAlgorithmSHA1:{
-            return kCCHmacAlgSHA1;
-        }
-        case ALXHashAlgorithmSHA256:{
-            return kCCHmacAlgSHA256;
-        }
-        case ALXHashAlgorithmSHA384:{
-            return kCCHmacAlgSHA384;
-        }
-        case ALXHashAlgorithmSHA512:{
-            return kCCHmacAlgSHA512;
-        }
-        case ALXHashAlgorithmSHA224:{
-            return kCCHmacAlgSHA224;
-        }
-    }
-}
+
+
+@interface ALXHashCryptoUtil ()
+
+@property (nonatomic) ALXHashAlgorithm hashAlgorithm;
+
+@end
 
 @implementation ALXHashCryptoUtil
 
@@ -87,6 +67,10 @@ static CCHmacAlgorithm ALXHmacAlgorithmFromHashAlgorithm(ALXHashAlgorithm algori
             [digest appendFormat:@"%02x", result[i]];
         }
     }
+    
+    if (self.hashAlgorithm == ALXHashAlgorithmMD516 || self.hashAlgorithm == ALXHashAlgorithmmd516) {
+        return [digest substringWithRange:NSMakeRange(8, 16)];
+    }
     return [digest copy];
 }
 
@@ -94,6 +78,7 @@ static CCHmacAlgorithm ALXHmacAlgorithmFromHashAlgorithm(ALXHashAlgorithm algori
     self = [super init];
     if (self) {
         
+        self.hashAlgorithm = hashCryptor.algorithm;
         self.resultLength = ALXLengthFromHashAlgorithm(hashCryptor.algorithm);
         if (self.resultLength <= 0) {
             NSAssert(self.resultLength > 0, @"invalid argument 'algorithm'.");
@@ -101,17 +86,6 @@ static CCHmacAlgorithm ALXHmacAlgorithmFromHashAlgorithm(ALXHashAlgorithm algori
         }
         
         self.uppercase = ALXUppercaseFromHashAlgorithm(hashCryptor.algorithm);
-        
-        if ([hashCryptor isKindOfClass:[ALXHMACCryptor class]]) {
-            ALXHMACCryptor *hmacCryptor = (ALXHMACCryptor *)hashCryptor;
-            
-            self.hmacAlgorithm = ALXHmacAlgorithmFromHashAlgorithm(hmacCryptor.algorithm);
-            
-            if (!hmacCryptor.key.length) {
-                NSAssert(hmacCryptor.key.length > 0, @"invalid argument 'key'.");
-                return nil;
-            }
-        }
     }
     return self;
 }
