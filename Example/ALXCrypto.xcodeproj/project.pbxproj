@@ -325,12 +325,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ALXCrypto_Example/Pods-ALXCrypto_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ALXCrypto/ALXCrypto.framework",
-				"${BUILT_PRODUCTS_DIR}/CocoaSecurity/CocoaSecurity.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALXCrypto.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaSecurity.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

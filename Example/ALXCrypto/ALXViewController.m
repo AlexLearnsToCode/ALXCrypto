@@ -9,7 +9,6 @@
 #import "ALXViewController.h"
 #import <ALXCrypto/ALXCrypto.h>
 #import "ALXCryptorFactory.h"
-#import <CocoaSecurity/CocoaSecurity.h>
 
 #define TEST @"IAmThePlainText"
 #define KEY @"16BytesLengthKey"
@@ -46,9 +45,6 @@
 - (void)testHmac{
     ALXHMACCryptor *hmacCryptor = [ALXCryptorFactory hmacCryptorWithAlgorithm:ALXHMACAlgorithmmd5 key:KEY];
     NSLog(@"hmac---%@", [hmacCryptor encrypt:TEST]);
-
-    CocoaSecurityResult *result = [CocoaSecurity hmacSha384:TEST hmacKey:KEY];
-    NSLog(@"result---%@", result.hexLower);
 }
 
 - (void)testECB{

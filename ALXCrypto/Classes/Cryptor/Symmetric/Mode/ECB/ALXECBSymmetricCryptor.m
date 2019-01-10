@@ -26,7 +26,7 @@
     encryptorUtil.operation = kCCEncrypt;
     plaintext = [encryptorUtil addPaddingToString:plaintext];
     
-    NSMutableData *contentData = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *contentData = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
     NSUInteger dataLength = contentData.length;
     
     // 为结束符'\\0' +1
