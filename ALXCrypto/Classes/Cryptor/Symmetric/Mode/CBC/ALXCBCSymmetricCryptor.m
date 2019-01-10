@@ -46,7 +46,7 @@
     
     // TODO:Alexgao---iv不存在时的处理
     NSData *initVector = [self.iv dataUsingEncoding:NSUTF8StringEncoding];
-    if (initVector.length != encryptorUtil.blockSize) {
+    if (initVector.length != 16) {
         NSAssert(initVector.length == 16, @"invalid argument 'iv'");
         return @"";
     }
@@ -93,8 +93,8 @@
     size_t actualOutSize = 0;
     
     NSData *initVector = [self.iv dataUsingEncoding:NSUTF8StringEncoding];
-    if (initVector.length != decryptorUtil.blockSize) {
-        NSAssert(initVector.length == decryptorUtil.blockSize, @"invalid argument 'key'.");
+    if (initVector.length != 16) {
+        NSAssert(initVector.length == 16, @"invalid argument 'key'.");
         return @"";
     }
     

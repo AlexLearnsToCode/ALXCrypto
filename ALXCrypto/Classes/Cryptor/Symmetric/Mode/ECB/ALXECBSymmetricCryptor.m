@@ -40,7 +40,7 @@
     
     CCCryptorStatus cryptStatus = CCCrypt(encryptorUtil.operation,
                                           encryptorUtil.algorithm,
-                                          encryptorUtil.options,  // 系统默认使用 CBC，然后指明使用 PKCS7Padding
+                                          encryptorUtil.options,  
                                           keyPtr,
                                           encryptorUtil.keySize,
                                           NULL,

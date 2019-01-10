@@ -28,7 +28,7 @@
 //    [self testHash];
 //    [self testHmac];
     [self testECB];
-//    [self testCBC];
+    [self testCBC];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,17 +48,17 @@
 }
 
 - (void)testECB{
-    ALXECBSymmetricCryptor *ecbCryptor = [ALXCryptorFactory ecbSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmAES128 key:KEY padding:ALXPKCS5Padding];
+    ALXECBSymmetricCryptor *ecbCryptor = [ALXCryptorFactory ecbSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmAES192 key:KEY padding:ALXPKCS7Padding];
     NSLog(@"ecb---encrypt---%@", [ecbCryptor encrypt:TEST]);
 
     NSLog(@"ecb---decrypt---%@", [ecbCryptor decrypt:[ecbCryptor encrypt:TEST]]);
 }
 
 - (void)testCBC{
-    ALXCBCSymmetricCryptor *cbcCryptor = [ALXCryptorFactory cbcSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmDES key:KEY padding:ALXPKCS7Padding iv:IV];
+    ALXCBCSymmetricCryptor *cbcCryptor = [ALXCryptorFactory cbcSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmAES192 key:KEY padding:ALXPKCS7Padding iv:IV];
     NSLog(@"cbc---encrypt---%@", [cbcCryptor encrypt:TEST]);
     
-//    NSLog(@"cbc---decrypt---%@", [cbcCryptor decrypt:[cbcCryptor encrypt:TEST]]);
+    NSLog(@"cbc---decrypt---%@", [cbcCryptor decrypt:[cbcCryptor encrypt:TEST]]);
 }
 
 - (void)testRSA{
