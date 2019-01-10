@@ -18,7 +18,7 @@ static CCOptions ALXOptionsFromModeAndPadding(CCMode mode, ALXPKCSPadding paddin
                 return kCCOptionPKCS7Padding | kCCModeECB;
             }
             default:
-                return 0x0000 | kCCModeECB;
+                return kCCOptionPKCS7Padding | kCCModeECB;
         }
     } else if (mode == kCCModeCBC) {
         switch (padding) {
@@ -29,10 +29,10 @@ static CCOptions ALXOptionsFromModeAndPadding(CCMode mode, ALXPKCSPadding paddin
                 return kCCOptionPKCS7Padding;
             }
             default:
-                return 0x0000;
+                return kCCOptionPKCS7Padding;
         }
     }
-    return 0x0000;
+    return kCCOptionPKCS7Padding;
 }
 
 static int ALXBlockSizeFromAlgorithm(ALXSymmetricCryptoAlgorithm algorithm){
@@ -70,7 +70,7 @@ static int ALXKeySizeFromAlgorithm(ALXSymmetricCryptoAlgorithm algorithm){
             return kCCKeySizeDES;
         }
         case ALXSymmetricCryptoAlgorithm3DES:{
-            return kCCKeySizeDES;
+            return kCCKeySize3DES;
         }
         default:
             return -1;
@@ -137,6 +137,7 @@ static CCAlgorithm ALXCCAlgorithmFromAlgorithm(ALXSymmetricCryptoAlgorithm algor
             return nil;
         }
         
+        // TODO:Alexgao---keysize不匹配时,如何处理
         NSUInteger keyBytesLength = [symmetricCryptor.key dataUsingEncoding:NSUTF8StringEncoding].length;
         if (self.keySize != keyBytesLength) {
             NSAssert(self.keySize == keyBytesLength, @"invalid argument 'key'");

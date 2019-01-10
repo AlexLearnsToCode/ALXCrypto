@@ -3,7 +3,7 @@
 //  ALXCrypto
 //
 //  Created by Alexgao on 2019/1/4.
-//
+//  对称加密,暂时只支持block mode
 
 #import "ALXCryptor.h"
 #import <CommonCrypto/CommonCrypto.h>
@@ -20,8 +20,8 @@ typedef NS_ENUM(NSInteger, ALXSymmetricCryptoAlgorithm) {
 
 typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
     ALXPKCSNoPadding = 0,
-//    ALXPKCS5Padding,    // 暂不实现
-    ALXPKCS7Padding
+    ALXPKCS7Padding,
+    ALXPKCS5Padding = ALXPKCS7Padding
 };
 
 @interface ALXSymmetricCryptor : ALXCryptor<ALXDecrypt>

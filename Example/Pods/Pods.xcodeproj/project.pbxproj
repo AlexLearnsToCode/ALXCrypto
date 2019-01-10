@@ -36,11 +36,11 @@
 		A5BC08E8A9629CE48ACA2C7C9050CA1D /* CocoaSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = D59E01DF4B11653789C10F84FC628CE1 /* CocoaSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6745D1346F4EB9B95AEE9BED5F817F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC2E512ACD5CB722F7ADF14560309F /* Foundation.framework */; };
 		A8120F1B331C2E2C6F902F01164B8163 /* ALXCrypto-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC52A6AC21D37A01B3AD444484C099A0 /* ALXCrypto-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE514E222602010224F4229FD0D7B357 /* ALXSymmetricCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 134AD15D0FE4A4C4F451B8A6B3CBFEFC /* ALXSymmetricCryptoUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE6EE28BB6E54D13907E674AC7DF6B2E /* ALXAsymmetricDecryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 763FFE07E86F42E005280A655D46D309 /* ALXAsymmetricDecryptorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE514E222602010224F4229FD0D7B357 /* ALXSymmetricCryptoUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 134AD15D0FE4A4C4F451B8A6B3CBFEFC /* ALXSymmetricCryptoUtil.h */; };
+		BE6EE28BB6E54D13907E674AC7DF6B2E /* ALXAsymmetricDecryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 763FFE07E86F42E005280A655D46D309 /* ALXAsymmetricDecryptorUtil.h */; };
 		BF9A9B1479D44E10F4A035B4A49AF4E3 /* Pods-ALXCrypto_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CA36C32656CC5AA9B583B2112A69103 /* Pods-ALXCrypto_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C308C48E9C57707306F8580AE37248B2 /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A0154162D553AC2BBC88FE4B250900 /* CocoaSecurity.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CD839EAC20ED0E509AA03BE6FEBCCF96 /* ALXAsymmetricEncryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FD178B622E4C5D60D372AE2B381316 /* ALXAsymmetricEncryptorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD839EAC20ED0E509AA03BE6FEBCCF96 /* ALXAsymmetricEncryptorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FD178B622E4C5D60D372AE2B381316 /* ALXAsymmetricEncryptorUtil.h */; };
 		CDBFA4D15FABA873435F660C4FF7A8F1 /* ALXRSAAsymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = FB5DE4E691DB103CD36249F8EF99F600 /* ALXRSAAsymmetricCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D14CC9B41B90622558F3B5B41CCBE893 /* ALXHashCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 39DC68706A0DE36869A262809E820854 /* ALXHashCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D49750CD4E95517E94BB48EFDD4C0D84 /* ALXECBSymmetricCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F532BDF9F3D381724555589BE90C9CA /* ALXECBSymmetricCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -483,8 +483,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A4F87E4913FE9FE80C13DA49AE561A /* ALXAsymmetricCryptor.h in Headers */,
-				BE6EE28BB6E54D13907E674AC7DF6B2E /* ALXAsymmetricDecryptorUtil.h in Headers */,
-				CD839EAC20ED0E509AA03BE6FEBCCF96 /* ALXAsymmetricEncryptorUtil.h in Headers */,
 				87E0DB7B9CDA62448F1480BC2BEC82F8 /* ALXCBCSymmetricCryptor.h in Headers */,
 				A8120F1B331C2E2C6F902F01164B8163 /* ALXCrypto-umbrella.h in Headers */,
 				8A2A927F6781E87CBAADE71615414A75 /* ALXCrypto.h in Headers */,
@@ -496,6 +494,8 @@
 				77A8C5558EF5FA648C37BBB7DA11DA57 /* ALXHMACCryptor.h in Headers */,
 				CDBFA4D15FABA873435F660C4FF7A8F1 /* ALXRSAAsymmetricCryptor.h in Headers */,
 				7D04613D0B1302DB1FACC477FD6D3FDC /* ALXSymmetricCryptor.h in Headers */,
+				BE6EE28BB6E54D13907E674AC7DF6B2E /* ALXAsymmetricDecryptorUtil.h in Headers */,
+				CD839EAC20ED0E509AA03BE6FEBCCF96 /* ALXAsymmetricEncryptorUtil.h in Headers */,
 				AE514E222602010224F4229FD0D7B357 /* ALXSymmetricCryptoUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

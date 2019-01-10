@@ -44,6 +44,7 @@
     void *encryptedBytes = malloc(encryptSize);
     size_t actualOutSize = 0;
     
+    // TODO:Alexgao---iv不存在时的处理
     NSData *initVector = [self.iv dataUsingEncoding:NSUTF8StringEncoding];
     if (initVector.length != encryptorUtil.blockSize) {
         NSAssert(initVector.length == 16, @"invalid argument 'iv'");
@@ -93,7 +94,7 @@
     
     NSData *initVector = [self.iv dataUsingEncoding:NSUTF8StringEncoding];
     if (initVector.length != decryptorUtil.blockSize) {
-        NSAssert(initVector.length == 16, @"invalid argument 'key'.");
+        NSAssert(initVector.length == decryptorUtil.blockSize, @"invalid argument 'key'.");
         return @"";
     }
     
