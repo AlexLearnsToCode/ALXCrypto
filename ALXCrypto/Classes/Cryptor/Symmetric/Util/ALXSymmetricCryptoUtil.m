@@ -138,11 +138,11 @@ static CCAlgorithm ALXCCAlgorithmFromAlgorithm(ALXSymmetricCryptoAlgorithm algor
         }
         
         // TODO:Alexgao---keysize不匹配时,如何处理
-//        NSUInteger keyBytesLength = [symmetricCryptor.key dataUsingEncoding:NSUTF8StringEncoding].length;
-//        if (self.keySize != keyBytesLength) {
-//            NSAssert(self.keySize == keyBytesLength, @"invalid argument 'key'");
-//            return nil;
-//        }
+        NSData *keyData = [symmetricCryptor.key dataUsingEncoding:NSUTF8StringEncoding];
+        if (keyData.length > self.keySize) {
+            NSAssert(keyData.length <= self.keySize, @"invalid key size.");
+            return nil;
+        }
     }
     return self;
 }

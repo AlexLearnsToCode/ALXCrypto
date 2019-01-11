@@ -11,7 +11,7 @@
 #import "ALXCryptorFactory.h"
 
 #define TEST @"IAmThePlainText"
-#define KEY @"16BytesLengthKey"
+#define KEY @"16BytesLengthStr"
 #define IV @"A-16-Byte-String"
 
 @interface ALXViewController ()
@@ -48,14 +48,14 @@
 }
 
 - (void)testECB{
-    ALXECBSymmetricCryptor *ecbCryptor = [ALXCryptorFactory ecbSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmAES192 key:KEY padding:ALXPKCS7Padding];
+    ALXECBSymmetricCryptor *ecbCryptor = [ALXCryptorFactory ecbSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmAES256 key:KEY padding:ALXPKCS7Padding];
     NSLog(@"ecb---encrypt---%@", [ecbCryptor encrypt:TEST]);
 
     NSLog(@"ecb---decrypt---%@", [ecbCryptor decrypt:[ecbCryptor encrypt:TEST]]);
 }
 
 - (void)testCBC{
-    ALXCBCSymmetricCryptor *cbcCryptor = [ALXCryptorFactory cbcSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmAES192 key:KEY padding:ALXPKCS7Padding iv:IV];
+    ALXCBCSymmetricCryptor *cbcCryptor = [ALXCryptorFactory cbcSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmAES256 key:KEY padding:ALXPKCS7Padding iv:IV];
     NSLog(@"cbc---encrypt---%@", [cbcCryptor encrypt:TEST]);
     
     NSLog(@"cbc---decrypt---%@", [cbcCryptor decrypt:[cbcCryptor encrypt:TEST]]);

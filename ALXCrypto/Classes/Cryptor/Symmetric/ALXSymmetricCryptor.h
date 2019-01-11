@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, ALXSymmetricCryptoAlgorithm) {
 
 typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
     ALXPKCSNoPadding = 0,
+    ALXPKCSZeroPadding,
     ALXPKCS7Padding,
     ALXPKCS5Padding = ALXPKCS7Padding
 };

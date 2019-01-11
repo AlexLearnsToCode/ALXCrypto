@@ -35,10 +35,11 @@
     
     NSData *contentData = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
     NSUInteger dataLength = contentData.length;
-    // 为结束符'\\0' +1
-    char keyPtr[encryptorUtil.keySize + 1];
-    memset(keyPtr, 0, sizeof(keyPtr));
-    [self.key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+    
+    // key
+    NSMutableData *keyData = [self.key dataUsingEncoding:NSUTF8StringEncoding].mutableCopy;
+    keyData.length = encryptorUtil.keySize;
+    
     // 密文长度 <= 明文长度 + BlockSize
     size_t encryptSize = dataLength + encryptorUtil.blockSize;
     void *encryptedBytes = malloc(encryptSize);
@@ -54,7 +55,7 @@
     CCCryptorStatus cryptStatus = CCCrypt(encryptorUtil.operation,
                                           encryptorUtil.algorithm,
                                           encryptorUtil.options,  // 系统默认使用 CBC，然后指明使用 PKCS7Padding
-                                          keyPtr,
+                                          keyData.bytes,
                                           encryptorUtil.keySize,
                                           initVector.bytes,
                                           contentData.bytes,
@@ -85,9 +86,11 @@
     // 把 base64 String 转换成 Data
     NSData *contentData = [[NSData alloc] initWithBase64EncodedString:ciphertext options:NSDataBase64DecodingIgnoreUnknownCharacters];
     NSUInteger dataLength = contentData.length;
-    char keyPtr[decryptorUtil.keySize + 1];
-    memset(keyPtr, 0, sizeof(keyPtr));
-    [self.key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+    
+    // key
+    NSMutableData *keyData = [self.key dataUsingEncoding:NSUTF8StringEncoding].mutableCopy;
+    keyData.length = decryptorUtil.keySize;
+    
     size_t decryptSize = dataLength + decryptorUtil.blockSize;
     void *decryptedBytes = malloc(decryptSize);
     size_t actualOutSize = 0;
@@ -101,7 +104,7 @@
     CCCryptorStatus cryptStatus = CCCrypt(decryptorUtil.operation,
                                           decryptorUtil.algorithm,
                                           decryptorUtil.options,
-                                          keyPtr,
+                                          keyData.bytes,
                                           decryptorUtil.keySize,
                                           initVector.bytes,
                                           contentData.bytes,
