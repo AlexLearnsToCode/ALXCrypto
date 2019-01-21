@@ -88,6 +88,8 @@
     NSUInteger dataLength = contentData.length;
     
     // key
+    // !!!:Alexgao---不同算法 key的size不同
+    // TODO:Alexgao---当key的实际size和算法要求的size不同时,如何处理
     NSMutableData *keyData = [self.key dataUsingEncoding:NSUTF8StringEncoding].mutableCopy;
     keyData.length = decryptorUtil.keySize;
     
@@ -95,6 +97,8 @@
     void *decryptedBytes = malloc(decryptSize);
     size_t actualOutSize = 0;
     
+    // !!!:Alexgao---不同算法 iv的size不同
+    // TODO:Alexgao---当iv的size和blockSize不一致时,如何处理
     NSData *initVector = [self.iv dataUsingEncoding:NSUTF8StringEncoding];
     if (initVector.length != 16) {
         NSAssert(initVector.length == 16, @"invalid argument 'key'.");
