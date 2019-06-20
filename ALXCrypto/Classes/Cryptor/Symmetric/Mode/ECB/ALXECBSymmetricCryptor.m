@@ -24,6 +24,8 @@
         return @"";
     }
     encryptorUtil.operation = kCCEncrypt;
+    
+    // 填充明文
     plaintext = [encryptorUtil addPaddingToString:plaintext];
     
     NSData *contentData = [plaintext dataUsingEncoding:NSUTF8StringEncoding];
@@ -33,29 +35,48 @@
     NSMutableData *keyData = [self.key dataUsingEncoding:NSUTF8StringEncoding].mutableCopy;
     keyData.length = encryptorUtil.keySize;
     
-    // 密文长度 <= 明文长度 + BlockSize
-    size_t encryptSize = dataLength + encryptorUtil.blockSize;
-    void *encryptedBytes = malloc(encryptSize);
-    size_t actualOutSize = 0;
-    
-    CCCryptorStatus cryptStatus = CCCrypt(encryptorUtil.operation,
-                                          encryptorUtil.algorithm,
-                                          encryptorUtil.options,  
-                                          keyData.bytes,
-                                          encryptorUtil.keySize,
-                                          NULL,
-                                          contentData.bytes,
-                                          dataLength,
-                                          encryptedBytes,
-                                          encryptSize,
-                                          &actualOutSize);
-    if (cryptStatus == kCCSuccess) {
-        // 对加密后的数据进行 base64 编码
-        return [[NSData dataWithBytesNoCopy:encryptedBytes length:actualOutSize] base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    CCCryptorRef cryptor = NULL;
+    CCCryptorStatus status = kCCSuccess;
+    status = CCCryptorCreateWithMode(encryptorUtil.operation, self.mode, encryptorUtil.algorithm, encryptorUtil.padding, NULL, keyData.bytes, keyData.length, NULL, 0, 0, kCCModeOptionCTR_BE, &cryptor);
+    if (status != kCCSuccess) {
+        NSAssert(status == kCCSuccess, @"cryptor create failed.");
+        return @"";
     }
-    free(encryptedBytes);
-    return @"";
 
+    //确定处理给定输入所需的输出缓冲区大小尺寸。
+    size_t bufsize = CCCryptorGetOutputLength(cryptor, (size_t)dataLength, true);
+    void * buf = malloc( bufsize );
+    size_t bufused = 0;
+    size_t bytesTotal = 0;
+    
+    //处理（加密，解密）一些数据。如果有结果的话,写入提供的缓冲区.
+    status = CCCryptorUpdate(cryptor, [contentData bytes], (size_t)dataLength,
+                             buf, bufsize, &bufused );
+    if (status != kCCSuccess) {
+        free(buf);
+        NSAssert(status == kCCSuccess, @"cryptor update failed.");
+        return @"";
+    }
+    
+    bytesTotal += bufused;
+    
+    if (self.padding == ALXPKCS7Padding) {
+        status = CCCryptorFinal(cryptor, buf + bufused, bufsize - bufused, &bufused);
+        if (status != kCCSuccess) {
+            free( buf );
+            NSAssert(status == kCCSuccess, @"cryptor final failed.");
+            return @"";
+        }
+        
+        bytesTotal += bufused;
+    }
+
+    // 对加密后的数据进行 base64 编码
+    NSString *cipherText = [[NSData dataWithBytesNoCopy:buf length:bytesTotal] base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    
+    CCCryptorRelease( cryptor );
+    
+    return cipherText;
 }
 
 - (NSString *)decrypt:(NSString *)ciphertext{
@@ -68,7 +89,6 @@
         return @"";
     }
     decryptorUtil.operation = kCCDecrypt;
-    ciphertext = [decryptorUtil removePaddingFromString:ciphertext];
     
     // 把 base64 String 转换成 Data
     NSData *contentData = [[NSData alloc] initWithBase64EncodedString:ciphertext options:NSDataBase64DecodingIgnoreUnknownCharacters];
@@ -78,26 +98,50 @@
     NSMutableData *keyData = [self.key dataUsingEncoding:NSUTF8StringEncoding].mutableCopy;
     keyData.length = decryptorUtil.keySize;
     
-    size_t decryptSize = dataLength + decryptorUtil.blockSize;
-    void *decryptedBytes = malloc(decryptSize);
-    size_t actualOutSize = 0;
-    
-    CCCryptorStatus cryptStatus = CCCrypt(decryptorUtil.operation,
-                                          decryptorUtil.algorithm,
-                                          decryptorUtil.options,
-                                          keyData.bytes,
-                                          decryptorUtil.keySize,
-                                          NULL,
-                                          contentData.bytes,
-                                          dataLength,
-                                          decryptedBytes,
-                                          decryptSize,
-                                          &actualOutSize);
-    if (cryptStatus == kCCSuccess) {
-        return [[NSString alloc] initWithData:[NSData dataWithBytesNoCopy:decryptedBytes length:actualOutSize] encoding:NSUTF8StringEncoding];
+    CCCryptorRef cryptor = NULL;
+    CCCryptorStatus status = kCCSuccess;
+    status = CCCryptorCreateWithMode(decryptorUtil.operation, self.mode, decryptorUtil.algorithm, decryptorUtil.padding, NULL, keyData.bytes, keyData.length, NULL, 0, 0, kCCModeOptionCTR_BE, &cryptor);
+    if (status != kCCSuccess) {
+        NSAssert(status == kCCSuccess, @"cryptor create failed.");
+        return @"";
     }
-    free(decryptedBytes);
-    return @"";
+    
+    //确定处理给定输入所需的输出缓冲区大小尺寸。
+    size_t bufsize = CCCryptorGetOutputLength(cryptor, (size_t)dataLength, true);
+    void * buf = malloc( bufsize );
+    size_t bufused = 0;
+    size_t bytesTotal = 0;
+    
+    //处理（加密，解密）一些数据。如果有结果的话,写入提供的缓冲区.
+    status = CCCryptorUpdate(cryptor, [contentData bytes], (size_t)dataLength,
+                             buf, bufsize, &bufused );
+    if (status != kCCSuccess) {
+        free(buf);
+        NSAssert(status == kCCSuccess, @"cryptor update failed.");
+        return @"";
+    }
+    
+    bytesTotal += bufused;
+    
+    if (self.padding == ALXPKCS7Padding) {
+        status = CCCryptorFinal(cryptor, buf + bufused, bufsize - bufused, &bufused);
+        if (status != kCCSuccess) {
+            free( buf );
+            NSAssert(status == kCCSuccess, @"cryptor final failed.");
+            return @"";
+        }
+        
+        bytesTotal += bufused;
+    }
+    
+    NSString *plainText = [[NSString alloc] initWithData:[NSData dataWithBytesNoCopy:buf length:bytesTotal] encoding:NSUTF8StringEncoding];
+    
+    // 移除填充
+    plainText = [decryptorUtil removePaddingFromString:plainText];
+    
+    CCCryptorRelease( cryptor );
+    
+    return plainText;
 }
 
 @end

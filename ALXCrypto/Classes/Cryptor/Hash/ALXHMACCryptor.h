@@ -13,7 +13,9 @@ typedef NS_ENUM(NSInteger, ALXHMACAlgorithm) {
     ALXHMACAlgorithmmd5,
     ALXHMACAlgorithmSHA1,
     ALXHMACAlgorithmSHA256,
-    ALXHMACAlgorithmSHA512,
+    // !!!:Alexgao---结果不正确,原因未知,暂时注释
+//    ALXHMACAlgorithmSHA384,
+    ALXHMACAlgorithmSHA512
 };
 
 @interface ALXHMACCryptor : ALXCryptor

@@ -1,8 +1,14 @@
 PODS:
   - ALXCrypto (0.1.0)
+  - OpenSSL-lib-iOS (0.1.0)
 
 DEPENDENCIES:
   - ALXCrypto (from `../`)
+  - OpenSSL-lib-iOS
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - OpenSSL-lib-iOS
 
 EXTERNAL SOURCES:
   ALXCrypto:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ALXCrypto: ead861db0dcb3c310fb3b69fc59b006b7fd838c2
+  OpenSSL-lib-iOS: 4caff5533da662dd917d15167f8b6c59713cb57f
 
-PODFILE CHECKSUM: fbda843fc572a9e6df96b22ff02e484d76e3739d
+PODFILE CHECKSUM: 43367dc5d6c98113b5642fc8f89fc068ebc7e097
 
 COCOAPODS: 1.5.3

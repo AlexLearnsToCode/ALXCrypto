@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) CCOperation operation;
 @property (nonatomic) CCAlgorithm algorithm;
-@property (nonatomic) CCOptions options;
+@property (nonatomic) CCPadding padding;
 @property (nonatomic) int blockSize;
 @property (nonatomic) int keySize;
 

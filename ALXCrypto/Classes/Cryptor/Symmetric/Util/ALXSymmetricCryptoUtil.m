@@ -8,31 +8,14 @@
 #import "ALXSymmetricCryptoUtil.h"
 #import "ALXSymmetricCryptor.h"
 
-static CCOptions ALXOptionsFromModeAndPadding(CCMode mode, ALXPKCSPadding padding) {
-    if (mode == kCCModeECB) {
-        switch (padding) {
-            case ALXPKCSNoPadding:{
-                return 0x0000 | kCCModeECB;
-            }
-            case ALXPKCS7Padding:{
-                return kCCOptionPKCS7Padding | kCCModeECB;
-            }
-            default:
-                return kCCOptionPKCS7Padding | kCCModeECB;
+static CCPadding ALXCCPaddingFromPadding(ALXPKCSPadding padding) {
+    switch (padding) {
+        case ALXPKCS7Padding:{
+            return ccPKCS7Padding;
         }
-    } else if (mode == kCCModeCBC) {
-        switch (padding) {
-            case ALXPKCSNoPadding:{
-                return 0x0000;
-            }
-            case ALXPKCS7Padding:{
-                return kCCOptionPKCS7Padding;
-            }
-            default:
-                return kCCOptionPKCS7Padding;
-        }
+        default:
+            return ccNoPadding;
     }
-    return kCCOptionPKCS7Padding;
 }
 
 static int ALXBlockSizeFromAlgorithm(ALXSymmetricCryptoAlgorithm algorithm){
@@ -120,7 +103,8 @@ static CCAlgorithm ALXCCAlgorithmFromAlgorithm(ALXSymmetricCryptoAlgorithm algor
         
         self.symmetricCryptor = symmetricCryptor;
         
-        self.options = ALXOptionsFromModeAndPadding(symmetricCryptor.mode, symmetricCryptor.padding);
+        
+        self.padding = ALXCCPaddingFromPadding(symmetricCryptor.padding);
         
         self.algorithm = ALXCCAlgorithmFromAlgorithm(symmetricCryptor.algorithm);
         if (self.algorithm < 0) {
@@ -138,21 +122,29 @@ static CCAlgorithm ALXCCAlgorithmFromAlgorithm(ALXSymmetricCryptoAlgorithm algor
         }
         
         // TODO:Alexgao---keysize不匹配时,如何处理
-        NSData *keyData = [symmetricCryptor.key dataUsingEncoding:NSUTF8StringEncoding];
-        if (keyData.length > self.keySize) {
-            NSAssert(keyData.length <= self.keySize, @"invalid key size.");
-            return nil;
-        }
+//        NSData *keyData = [symmetricCryptor.key dataUsingEncoding:NSUTF8StringEncoding];
+//        if (keyData.length > self.keySize) {
+//            NSAssert(keyData.length <= self.keySize, @"invalid key size.");
+//            return nil;
+//        }
     }
     return self;
 }
 
 - (NSString *)addPaddingToString:(NSString *)plaintext{
+    
+//    if (self.symmetricCryptor.padding == ALXPKCSNoPadding) {
+//        if (plaintext.length % self.blockSize != 0) {
+//            NSAssert(plaintext.length % self.blockSize == 0, @"");
+//            return plaintext;
+//        }
+//    }
+    
     switch (self.symmetricCryptor.padding) {
         case ALXPKCS7Padding:{
             return plaintext;
         }
-        case ALXPKCSNoPadding:{
+        case ALXPKCSZeroPadding:{
             NSMutableData *data = [[plaintext dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
             int diff = self.blockSize - (data.length % self.blockSize);
             int padding = 0x00;
@@ -166,21 +158,21 @@ static CCAlgorithm ALXCCAlgorithmFromAlgorithm(ALXSymmetricCryptoAlgorithm algor
     }
 }
 
-- (NSString *)removePaddingFromString:(NSString *)ciphertext{
+- (NSString *)removePaddingFromString:(NSString *)plainText{
     switch (self.symmetricCryptor.padding) {
         case ALXPKCS7Padding:{
-            return ciphertext;
+            return plainText;
         }
-        case ALXPKCSNoPadding:{
-            const char *originalStr = [ciphertext UTF8String];
+        case ALXPKCSZeroPadding:{
+            const char *originalStr = [plainText UTF8String];
             int i = 0;
-            while( originalStr[i] != '\0' ){
+            while(originalStr[i] != '\0'){
                 i++;
             }
             return [[NSString alloc] initWithBytes:originalStr length:i encoding:NSUTF8StringEncoding];
         }
         default:
-            return ciphertext;
+            return plainText;
     }
 }
 

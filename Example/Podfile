@@ -4,6 +4,7 @@ platform :ios, '8.0'
 
 target 'ALXCrypto_Example' do
   pod 'ALXCrypto', :path => '../'
+  pod 'OpenSSL-lib-iOS'
   target 'ALXCrypto_Tests' do
     inherit! :search_paths
 

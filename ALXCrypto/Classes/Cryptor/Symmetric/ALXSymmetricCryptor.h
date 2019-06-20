@@ -19,11 +19,15 @@ typedef NS_ENUM(NSInteger, ALXSymmetricCryptoAlgorithm) {
 };
 
 typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
-    ALXPKCSNoPadding = 0,
-    ALXPKCSZeroPadding,
-    ALXPKCS7Padding,
+    ALXPKCSNoPadding = 0,    // 使用noPadding的话, 明文长度(字节)必须是加密算法对应blockSize的整数倍
+    ALXPKCSZeroPadding,    // 0x00
+    ALXPKCS7Padding, //PKCS7Padding 向下兼容 PKCS5Padding
     ALXPKCS5Padding = ALXPKCS7Padding
 };
+
+// !!!:Alexgao---PKCS5Padding要求块的大小必须为8, PKCS7Padding对块的大小无要求(0-255)
+// !!!:Alexgao---用PKCS5Padding填充加密的,PKCS7Padding可以解密
+// !!!:Alexgao---用PKCS7Padding填充加密的,PKCS5Padding无法解密(取决于块大小)
 
 @interface ALXSymmetricCryptor : ALXCryptor<ALXDecrypt>
 
@@ -31,6 +35,7 @@ typedef NS_ENUM(NSInteger, ALXPKCSPadding) {
 
 @property (nonatomic) ALXSymmetricCryptoAlgorithm algorithm;
 @property (nonatomic, copy) NSString *key;
+/** 填充模式,主要用于分组密码 */
 @property (nonatomic) ALXPKCSPadding padding;
 
 @end

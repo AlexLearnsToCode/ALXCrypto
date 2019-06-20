@@ -19,8 +19,11 @@ static int ALXLengthFromHMACAlgorithm(ALXHMACAlgorithm algorithm) {
         case ALXHMACAlgorithmSHA256:{
             return CC_SHA256_DIGEST_LENGTH;
         }
+//        case ALXHMACAlgorithmSHA384:{
+//            return CC_SHA384_DIGEST_LENGTH;
+//        }
         case ALXHMACAlgorithmSHA512:{
-            return CC_SHA384_DIGEST_LENGTH;
+            return CC_SHA512_DIGEST_LENGTH;
         }
         default:
             return -1;
@@ -38,6 +41,9 @@ static CCHmacAlgorithm ALXHmacAlgorithmFromHashAlgorithm(ALXHMACAlgorithm algori
         case ALXHMACAlgorithmSHA256:{
             return kCCHmacAlgSHA256;
         }
+//        case ALXHMACAlgorithmSHA384:{
+//            return kCCHmacAlgSHA384;
+//        }
         case ALXHMACAlgorithmSHA512:{
             return kCCHmacAlgSHA512;
         }
