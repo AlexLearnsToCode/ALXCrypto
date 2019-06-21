@@ -13,9 +13,16 @@ typedef NS_ENUM(NSInteger, ALXAsymmetricCryptoAlgorithm) {
     ALXAsymmetricCryptoAlgorithmRSA = 1,
 };
 
+typedef NS_ENUM(NSInteger, ALXAsymmetricCryptorType) {
+    ALXAsymmetricCryptorTypeEncryption,    // 公钥加密
+    ALXAsymmetricCryptorTypeSignature    // 私钥加密
+};
+
 @interface ALXAsymmetricCryptor : ALXCryptor<ALXDecrypt>
 
 @property (nonatomic, readonly) ALXAsymmetricCryptoAlgorithm algorithm;
+
+// TODO:Alexgao---缺少字段确定现在是 使用公钥加密还是使用私钥加密
 
 #pragma mark - Encrypt - Public Key
 @property (nonatomic, copy) NSString *publicKey;
