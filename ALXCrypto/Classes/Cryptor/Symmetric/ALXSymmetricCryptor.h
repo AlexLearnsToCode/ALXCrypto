@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, ALXSymmetricCryptoAlgorithm) {
     ALXSymmetricCryptoAlgorithmAES128,
-    ALXSymmetricCryptoAlgorithmAES192,
-    ALXSymmetricCryptoAlgorithmAES256,
+    ALXSymmetricCryptoAlgorithmAES192,    // Apple暂不支持
+    ALXSymmetricCryptoAlgorithmAES256,    // Apple暂不支持
     ALXSymmetricCryptoAlgorithmDES,
     ALXSymmetricCryptoAlgorithm3DES
 };

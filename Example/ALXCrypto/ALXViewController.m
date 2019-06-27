@@ -10,9 +10,9 @@
 #import <ALXCrypto/ALXCrypto.h>
 #import "ALXCryptorFactory.h"
 
-#define TEST @"中文中文"
-#define KEY @"tessssssssssssws"
-#define IV @"A-16"
+#define TEST @"aaaaaaaaaaaaaaaaaaaaaaaaaa"
+#define KEY @"test"
+#define IV @"aaaaaaaabbbbbbbbbbbbbb"
 
 @interface ALXViewController ()
 
@@ -30,8 +30,10 @@
     // 测试通过
 //    [self testHmac];
     
-    
+    // 测试通过
 //    [self testECB];
+    
+    // 测试通过
     [self testCBC];
 }
 
@@ -55,14 +57,14 @@
     
     NSLog(@"length---%d", [TEST dataUsingEncoding:NSUTF8StringEncoding].length);
     
-    ALXECBSymmetricCryptor *ecbCryptor = [ALXCryptorFactory ecbSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmDES key:KEY padding:ALXPKCSZeroPadding];
+    ALXECBSymmetricCryptor *ecbCryptor = [ALXCryptorFactory ecbSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithm3DES key:KEY padding:ALXPKCS7Padding];
     NSLog(@"ecb---encrypt---%@", [ecbCryptor encrypt:TEST]);
 
     NSLog(@"ecb---decrypt---%@", [ecbCryptor decrypt:[ecbCryptor encrypt:TEST]]);
 }
 
 - (void)testCBC{
-    ALXCBCSymmetricCryptor *cbcCryptor = [ALXCryptorFactory cbcSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithmDES key:KEY padding:ALXPKCS7Padding iv:IV];
+    ALXCBCSymmetricCryptor *cbcCryptor = [ALXCryptorFactory cbcSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithm3DES key:KEY padding:ALXPKCSZeroPadding iv:IV];
     NSLog(@"cbc---encrypt---%@", [cbcCryptor encrypt:TEST]);
     
     NSLog(@"cbc---decrypt---%@", [cbcCryptor decrypt:[cbcCryptor encrypt:TEST]]);

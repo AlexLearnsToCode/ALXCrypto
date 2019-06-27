@@ -20,9 +20,7 @@ static CCPadding ALXCCPaddingFromPadding(ALXPKCSPadding padding) {
 
 static int ALXBlockSizeFromAlgorithm(ALXSymmetricCryptoAlgorithm algorithm){
     switch (algorithm) {
-        case ALXSymmetricCryptoAlgorithmAES128:
-        case ALXSymmetricCryptoAlgorithmAES192:
-        case ALXSymmetricCryptoAlgorithmAES256:{
+        case ALXSymmetricCryptoAlgorithmAES128:{
             return kCCBlockSizeAES128;
         }
         case ALXSymmetricCryptoAlgorithmDES:{

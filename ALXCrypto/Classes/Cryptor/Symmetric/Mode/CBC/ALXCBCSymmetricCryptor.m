@@ -44,6 +44,9 @@
     
     // iv
     NSMutableData *ivData = [self.iv dataUsingEncoding:NSUTF8StringEncoding].mutableCopy;
+    if (ivData.length < encryptorUtil.blockSize) {
+        NSAssert(ivData.length < encryptorUtil.blockSize, @"iv's size should be larger than the size of block.");
+    }
     ivData.length = encryptorUtil.keySize;
     
     CCCryptorRef cryptor = NULL;
@@ -111,6 +114,9 @@
     
     // iv
     NSMutableData *ivData = [self.iv dataUsingEncoding:NSUTF8StringEncoding].mutableCopy;
+    if (ivData.length < decryptorUtil.blockSize) {
+        NSAssert(ivData.length < decryptorUtil.blockSize, @"iv's size should be larger than the size of block.");
+    }
     ivData.length = decryptorUtil.keySize;
     
     CCCryptorRef cryptor = NULL;
