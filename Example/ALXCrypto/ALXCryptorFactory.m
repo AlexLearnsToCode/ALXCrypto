@@ -45,8 +45,8 @@
 #pragma mark - Asymmetric
 + (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPublicKey:(NSString *)publicKey privateKey:(NSString *)privateKey;{
     ALXRSAAsymmetricCryptor *rsaCryptor = [[ALXRSAAsymmetricCryptor alloc] init];
-    rsaCryptor.publicKey = publicKey;
-    rsaCryptor.privateKey = privateKey;
+//    rsaCryptor.publicKey = publicKey;
+//    rsaCryptor.privateKey = privateKey;
     return rsaCryptor;
 }
 
