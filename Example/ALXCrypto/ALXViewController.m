@@ -34,7 +34,8 @@
 //    [self testECB];
     
     // 测试通过
-    [self testCBC];
+//    [self testCBC];
+//    NSString *publicFilePath = [[NSBundle mainBundle] pathForResource:@"lagou" ofType:@"der"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,8 +56,6 @@
 
 - (void)testECB{
     
-    NSLog(@"length---%d", [TEST dataUsingEncoding:NSUTF8StringEncoding].length);
-    
     ALXECBSymmetricCryptor *ecbCryptor = [ALXCryptorFactory ecbSymmetricCryptorWithAlgorithm:ALXSymmetricCryptoAlgorithm3DES key:KEY padding:ALXPKCS7Padding];
     NSLog(@"ecb---encrypt---%@", [ecbCryptor encrypt:TEST]);
 
@@ -70,11 +69,26 @@
     NSLog(@"cbc---decrypt---%@", [cbcCryptor decrypt:[cbcCryptor encrypt:TEST]]);
 }
 
-- (void)testRSA{
-    ALXRSAAsymmetricCryptor *rsaCryptor = [ALXCryptorFactory rsaAsymmetricCryptorWithPublicKey:@"" privateKey:@""];
-    NSLog(@"rsa---encrypt---%@", [rsaCryptor encrypt:TEST]);
-    
-    NSLog(@"rsa---decrypt---%@", [rsaCryptor decrypt:[rsaCryptor encrypt:TEST]]);
+- (void)testRSA_Encryption {
+    ALXRSAAsymmetricCryptor *rsaCryptor = [ALXCryptorFactory rsaAsymmetricCryptorWithPublicKeyFilePath:@"" padding:ALXAsymmetricCryptoPaddingPKCS1];
+    NSLog(@"rsa---encrypt---%@", [rsaCryptor encrypt:@""]);
+}
+
+- (void)testRSA_Decryption {
+    ALXRSAAsymmetricCryptor *rsaCryptor = [ALXCryptorFactory rsaAsymmetricCryptorWithPrivateKeyFile:@"" padding:ALXAsymmetricCryptoPaddingPKCS1];
+    NSLog(@"rsa---decrypt---%@", [rsaCryptor decrypt:@""]);
+}
+
+- (void)testRSA_Signature {
+    ALXRSAAsymmetricCryptor *rsaCryptor = [ALXCryptorFactory rsaAsymmetricCryptorWithPrivateKeyFile:@""
+                                                                                 signatureAlgorithm:ALXAsymmetricCryptoSignatureAlgorithmSHA1];
+    NSLog(@"rsa---sign---%@", [rsaCryptor signWithRawString:@""]);
+}
+
+- (void)testRSA_VerifySignature {
+    ALXRSAAsymmetricCryptor *rsaCryptor = [ALXCryptorFactory rsaAsymmetricCryptorWithPublicKeyFilePath:@""
+                                                                                    signatureAlgorithm:ALXAsymmetricCryptoSignatureAlgorithmSHA1];
+    NSLog(@"rsa---verifySign---%d", [rsaCryptor verifyWithSignedString:@""]);
 }
 
 @end

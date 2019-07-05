@@ -68,6 +68,7 @@
 		970AE0C1081860160771A60E /* Pods-ALXCrypto_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALXCrypto_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALXCrypto_Tests/Pods-ALXCrypto_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A27649DBB126097ED4142625 /* Pods-ALXCrypto_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALXCrypto_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ALXCrypto_Example/Pods-ALXCrypto_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B49E61A347E31C62E5AC9589 /* Pods_ALXCrypto_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ALXCrypto_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6656C9722CF47A000FA68B3 /* lagou.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = lagou.der; sourceTree = "<group>"; };
 		D30E47A7761509732142E0EA /* Pods-ALXCrypto_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ALXCrypto_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ALXCrypto_Tests/Pods-ALXCrypto_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D6262F1005B8186470E94E20 /* ALXCrypto.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ALXCrypto.podspec; path = ../ALXCrypto.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -135,6 +136,7 @@
 		6003F593195388D20070C39A /* Example for ALXCrypto */ = {
 			isa = PBXGroup;
 			children = (
+				C6656C9722CF47A000FA68B3 /* lagou.der */,
 				1911C15321E1EC5B00DA58FE /* ALXCryptorFactory.h */,
 				1911C15421E1EC5B00DA58FE /* ALXCryptorFactory.m */,
 				6003F59C195388D20070C39A /* ALXAppDelegate.h */,

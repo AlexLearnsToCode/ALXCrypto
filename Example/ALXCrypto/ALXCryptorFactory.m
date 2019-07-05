@@ -43,10 +43,37 @@
 }
 
 #pragma mark - Asymmetric
-+ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPublicKey:(NSString *)publicKey privateKey:(NSString *)privateKey;{
+#pragma mark - *** Encryption ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPublicKeyFilePath:(NSString *)publicKeyFilePath padding:(ALXAsymmetricCryptoPadding)padding{
     ALXRSAAsymmetricCryptor *rsaCryptor = [[ALXRSAAsymmetricCryptor alloc] init];
-//    rsaCryptor.publicKey = publicKey;
-//    rsaCryptor.privateKey = privateKey;
+    rsaCryptor.publicKeyFilePath = publicKeyFilePath;
+    rsaCryptor.padding = padding;
+    return rsaCryptor;
+}
+
+#pragma mark - *** Decryption ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPrivateKeyFile:(NSString *)privateKeyFilePath padding:(ALXAsymmetricCryptoPadding)padding{
+    ALXRSAAsymmetricCryptor *rsaCryptor = [[ALXRSAAsymmetricCryptor alloc] init];
+    rsaCryptor.privateKeyFilePath = privateKeyFilePath;
+    rsaCryptor.padding = padding;
+    return rsaCryptor;
+}
+
+#pragma mark - *** Signature ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPrivateKeyFile:(NSString *)privateKeyFilePath
+                                                 signatureAlgorithm:(ALXAsymmetricCryptoSignatureAlgorithm)signatureAlgorithm {
+    ALXRSAAsymmetricCryptor *rsaCryptor = [[ALXRSAAsymmetricCryptor alloc] init];
+    rsaCryptor.privateKeyFilePath = privateKeyFilePath;
+    rsaCryptor.signatureAlgorithm = signatureAlgorithm;
+    return rsaCryptor;
+}
+
+#pragma mark - *** Verify ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPublicKeyFilePath:(NSString *)publicKeyFilePath
+                                                    signatureAlgorithm:(ALXAsymmetricCryptoSignatureAlgorithm)signatureAlgorithm {
+    ALXRSAAsymmetricCryptor *rsaCryptor = [[ALXRSAAsymmetricCryptor alloc] init];
+    rsaCryptor.publicKeyFilePath = publicKeyFilePath;
+    rsaCryptor.signatureAlgorithm = signatureAlgorithm;
     return rsaCryptor;
 }
 

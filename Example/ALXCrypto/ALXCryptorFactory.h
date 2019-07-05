@@ -22,7 +22,18 @@ NS_ASSUME_NONNULL_BEGIN
 + (ALXCBCSymmetricCryptor *)cbcSymmetricCryptorWithAlgorithm:(ALXSymmetricCryptoAlgorithm)algorithm key:(NSString *)key padding:(ALXPKCSPadding)padding iv:(NSString *)iv;
 
 #pragma mark - Asymmetric
-+ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPublicKey:(NSString *)publicKey privateKey:(NSString *)privateKey;
+#pragma mark - *** Encryption ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPublicKeyFilePath:(NSString *)publicKeyFilePath padding:(ALXAsymmetricCryptoPadding)padding;
+#pragma mark - *** Decryption ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPrivateKeyFile:(NSString *)privateKeyFilePath padding:(ALXAsymmetricCryptoPadding)padding;
+#pragma mark - *** Signature ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPrivateKeyFile:(NSString *)privateKeyFilePath
+                                                 signatureAlgorithm:(ALXAsymmetricCryptoSignatureAlgorithm)signatureAlgorithm;
+
+#pragma mark - *** Verify ***
++ (ALXRSAAsymmetricCryptor *)rsaAsymmetricCryptorWithPublicKeyFilePath:(NSString *)publicKeyFilePath
+                                                    signatureAlgorithm:(ALXAsymmetricCryptoSignatureAlgorithm)signatureAlgorithm;
+
 
 @end
 
